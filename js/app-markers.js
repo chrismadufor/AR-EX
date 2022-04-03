@@ -29,6 +29,13 @@ function renderMarkers(sponsors) {
 
     sponsors.forEach((sponsor, index) => {
         //create asset
+        let assetEl = document.createElement('a-assets')
+        assetEl.setAttribute('id', sponsor.name)
+        assetEl.setAttribute('src', sponsor.modelUrl)
+
+//         <a-assets>
+//     <a-asset-item id="cityModel" src="https://cdn.aframe.io/test-models/models/glTF-2.0/virtualcity/VC.gltf"></a-asset-item>
+//   </a-assets>
 
         //create marker
         let markerEl = document.createElement('a-marker');
@@ -38,8 +45,8 @@ function renderMarkers(sponsors) {
         markerEl.setAttribute('markerEvents', '');
         //create entity and add as child to marker
         let model = document.createElement('a-entity')
-        model.setAttribute('id',sponsor.name);
-        model.setAttribute('gltf-model', './assets/models/piggyvest/scene.gltf');
+        // model.setAttribute('id',sponsor.name);/
+        model.setAttribute('gltf-model', `#${sponsor.name}`);
         markerEl.appendChild(model)
         sceneEl.appendChild(markerEl)
     })
