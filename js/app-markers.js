@@ -30,7 +30,7 @@ function renderMarkers(sponsors) {
     sponsors.forEach((sponsor, index) => {
         //create asset
         let assetEl = document.createElement('a-assets')
-        assetEl.setAttribute('id', sponsor.name)
+        assetEl.setAttribute('id', `${sponsor.name}-asset`)
         assetEl.setAttribute('src', sponsor.modelUrl)
 
 //         <a-assets>
@@ -41,11 +41,11 @@ function renderMarkers(sponsors) {
         let markerEl = document.createElement('a-marker');
         markerEl.setAttribute('type','pattern');
         markerEl.setAttribute('url', sponsor.url);
-        markerEl.setAttribute('id', sponsor.name);
+        markerEl.setAttribute('id', `${sponsor.name}-marker`);
         markerEl.setAttribute('markerEvents', '');
         //create entity and add as child to marker
         let model = `<a-entity
-        gltf-model="#${sponsor.name}"
+        gltf-model="#${sponsor.name}-asset"
         scale="2">
     </a-entity>`
     console.log('Backyard works!!')
