@@ -11,13 +11,13 @@ function loadSponsors() {
     return [
     {
         name: 'paystack',
-        url: 'assets/markers/paystack.png',
+        url: 'assets/markers/paystack.patt',
         modelUrl: 'assets/models/paystack/scene.gltf',
         message: 'Hi, Paystack is amazing!'
     },
     {
         name: 'piggyvest',
-        url: 'assets/markers/piggyvest.png',
+        url: 'assets/markers/piggyvest.patt',
         modelUrl: 'assets/models/piggyvest/scene.gltf',
         message: 'Hi, hit your savings targets with Piggyvest'
     },
