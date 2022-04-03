@@ -39,8 +39,7 @@ function renderMarkers(sponsors) {
         //create entity and add as child to marker
         let model = document.createElement('a-entity')
         model.setAttribute('id',sponsor.name);
-        model.setAttribute('gltf-model', sponsor.modelUrl);
-        console.log('modelLink', sponsor.modelUrl)
+        model.setAttribute('gltf-model', './assets/models/piggyvest/scene.gltf');
         markerEl.appendChild(model)
         sceneEl.appendChild(markerEl)
     })
