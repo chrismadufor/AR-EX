@@ -30,8 +30,10 @@ function renderMarkers(sponsors) {
     sponsors.forEach((sponsor, index) => {
         //create asset
         let assetEl = document.createElement('a-assets')
-        assetEl.setAttribute('id', `${sponsor.name}-asset`)
-        assetEl.setAttribute('src', sponsor.modelUrl)
+        let assetItemEl = document.createElement('a-asset-item')
+        assetItemEl.setAttribute('id', `${sponsor.name}-asset`)
+        assetItemEl.setAttribute('src', sponsor.modelUrl)
+        assetEl.appendChild(assetItemEl)
 
 //         <a-assets>
 //     <a-asset-item id="cityModel" src="https://cdn.aframe.io/test-models/models/glTF-2.0/virtualcity/VC.gltf"></a-asset-item>
