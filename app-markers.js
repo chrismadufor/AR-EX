@@ -11,14 +11,14 @@ function loadSponsors() {
     return [
     {
         name: 'paystack',
-        url: '../assets/markers/paystack.png',
-        modelUrl: '../assets/models/paystack/scene.gltf',
+        url: 'assets/markers/paystack.png',
+        modelUrl: 'assets/models/paystack/scene.gltf',
         message: 'Hi, Paystack is amazing!'
     },
     {
         name: 'piggyvest',
-        url: '../assets/markers/piggyvest.png',
-        modelUrl: '../assets/models/piggyvest/scene.gltf',
+        url: 'assets/markers/piggyvest.png',
+        modelUrl: 'assets/models/piggyvest/scene.gltf',
         message: 'Hi, hit your savings targets with Piggyvest'
     },
 ]}
@@ -44,7 +44,8 @@ function renderMarkers(sponsors) {
         markerEl.setAttribute('type','pattern');
         markerEl.setAttribute('url', sponsor.url);
         markerEl.setAttribute('id', `${sponsor.name}-marker`);
-        markerEl.setAttribute('markerEvents', '');
+        markerEl.setAttribute('type', 'pattern');
+        markerEl.setAttribute('preset', 'custom');
         //create entity and add as child to marker
         let model = `<a-entity
         gltf-model="#${sponsor.name}-asset"
