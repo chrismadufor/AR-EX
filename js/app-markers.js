@@ -48,6 +48,7 @@ function renderMarkers(sponsors) {
         // model.setAttribute('id',sponsor.name);/
         model.setAttribute('gltf-model', `#${sponsor.name}`);
         markerEl.appendChild(model)
+        sceneEl.appendChild(assetEl)
         sceneEl.appendChild(markerEl)
     })
 }
