@@ -49,7 +49,7 @@ function renderMarkers(sponsors) {
         scale="2">
     </a-entity>`
     console.log('Backyard works!!')
-        markerEl.appendChild(model)
+        markerEl.innerHTML = model
         sceneEl.appendChild(assetEl)
         sceneEl.appendChild(markerEl)
     })
