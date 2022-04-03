@@ -1,5 +1,7 @@
 // Get array of objects of the sponsors
 
+console.log('File Loaded')
+
 let sponsors = [
     {
         name: 'paystack',
@@ -17,6 +19,7 @@ let sponsors = [
 
 AFrame.registerComponent('markers_start', {
     init:function() {
+	    console.log('Init function loaded')
         let sceneEl = document.querySelector('a-scene');
 
         sponsors.forEach((sponsor, index) => {
