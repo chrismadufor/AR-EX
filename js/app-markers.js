@@ -45,6 +45,7 @@ function renderMarkers(sponsors) {
         markerEl.setAttribute('markerEvents', '');
         //create entity and add as child to marker
         let model = document.createElement('a-entity')
+        model.removeAttribute('gltf-model')
         // model.setAttribute('id',sponsor.name);/
         model.setAttribute('gltf-model', `#${sponsor.name}`);
         markerEl.appendChild(model)
