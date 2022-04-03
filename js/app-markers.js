@@ -11,14 +11,14 @@ function loadSponsors() {
     return [
     {
         name: 'paystack',
-        url: 'assets/markers/paystack.png',
-        modelUrl: 'assets/models/paystack/scene.gltf',
+        url: '../assets/markers/paystack.png',
+        modelUrl: '../assets/models/paystack/scene.gltf',
         message: 'Hi, Paystack is amazing!'
     },
     {
         name: 'piggyvest',
-        url: './assets/markers/piggyvest.png',
-        modelUrl: './assets/models/piggyvest/scene.gltf',
+        url: '../assets/markers/piggyvest.png',
+        modelUrl: '../assets/models/piggyvest/scene.gltf',
         message: 'Hi, hit your savings targets with Piggyvest'
     },
 ]}
