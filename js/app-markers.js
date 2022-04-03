@@ -40,7 +40,7 @@ function renderMarkers(sponsors) {
         let model = document.createElement('a-entity')
         model.setAttribute('id',sponsor.name);
         model.setAttribute('gltf-model', sponsor.modelUrl);
-
+        console.log('modelLink', sponsor.modelUrl)
         markerEl.appendChild(model)
         sceneEl.appendChild(markerEl)
     })
