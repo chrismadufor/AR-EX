@@ -65,9 +65,9 @@ function renderMarkers(sponsors) {
 // 1. marker-found/object-revealed: Show clickable button to claim prize.
 // 2. click: open modal that gives feedback.
 
-AFRAME.registerComponent('markers_start',{
-	init:function(){
-        console.log('component thing is working')
-    }
-})
+// AFRAME.registerComponent('markers_start',{
+// 	init:function(){
+//         console.log('component thing is working')
+//     }
+// })
 
