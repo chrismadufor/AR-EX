@@ -5,6 +5,8 @@ window.onload = () => {
     renderMarkers(sponsors);
 };
 
+console.log('File Loaded')
+
 function loadSponsors() {
     return [
     {
@@ -33,25 +35,24 @@ function renderMarkers(sponsors) {
         assetItemEl.setAttribute('src', sponsor.modelUrl)
         assetEl.appendChild(assetItemEl)
 
+//         <a-assets>
+//     <a-asset-item id="cityModel" src="https://cdn.aframe.io/test-models/models/glTF-2.0/virtualcity/VC.gltf"></a-asset-item>
+//   </a-assets>
+
         //create marker
         let markerEl = document.createElement('a-marker');
         markerEl.setAttribute('type','pattern');
         markerEl.setAttribute('url', sponsor.url);
         markerEl.setAttribute('id', `${sponsor.name}-marker`);
+        markerEl.setAttribute('type', 'pattern');
         markerEl.setAttribute('preset', 'custom');
-        // markerEl.setAttribute('smooth', 'true');
-        // markerEl.setAttribute('smoothCount', '10');
-        // markerEl.setAttribute('raycaster', 'objects: .clickable');
-        // markerEl.setAttribute('emitevents', 'true');
-        // markerEl.setAttribute('cursor', 'fuse: false; rayOrigin: mouse;');
-
         //create entity and add as child to marker
         let model = `<a-entity
-            gltf-model="#${sponsor.name}-asset" 
-            scale='2'>
-        </a-entity>`
+        gltf-model="#${sponsor.name}-asset"
+        scale="2">
+    </a-entity>`
+    console.log('Backyard works!!')
         markerEl.innerHTML = model
-
         sceneEl.appendChild(assetEl)
         sceneEl.appendChild(markerEl)
     })
