@@ -41,11 +41,11 @@ AFRAME.registerComponent('markers_start',{
                 message: 'Hi, hit your savings targets with Piggyvest'
             },
         ]
-        
+
         console.log('Init function loaded')
         let sceneEl = document.querySelector('a-scene');
     
-        sponsors.forEach((sponsor, index) => {
+        for (i=0; i<sponsors.length; i++){
             //create asset
             let assetEl = document.createElement('a-assets')
             let assetItemEl = document.createElement('a-asset-item')
@@ -64,12 +64,12 @@ AFRAME.registerComponent('markers_start',{
             let model = `<a-entity
             gltf-model="#${sponsor.name}-asset"
             scale="2">
-        </a-entity>`
-        console.log('Backyard works!!')
+            </a-entity>`
+            console.log('Backyard works!!')
             markerEl.innerHTML = model
             sceneEl.appendChild(assetEl)
             sceneEl.appendChild(markerEl)
-        })
+        }
     }
 })
 
