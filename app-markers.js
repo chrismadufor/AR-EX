@@ -63,7 +63,7 @@ AFRAME.registerComponent('markers_start',{
             //create entity and add as child to marker
             let model = `<a-entity
             gltf-model="#${sponsors[i].name}-asset"
-            rotation="0 180 0" scale="0.15 0.15 0.15">
+            rotation="0 180 0" scale="0.5 0.5 0.5">
             </a-entity>`
             console.log('Backyard works!!')
             markerEl.innerHTML = model
