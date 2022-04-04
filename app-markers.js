@@ -41,14 +41,14 @@ function renderMarkers(sponsors) {
         // markerEl.setAttribute('smooth', 'true');
         // markerEl.setAttribute('smoothCount', '10');
         markerEl.setAttribute('preset', 'custom');
-        // markerEl.setAttribute('raycaster', 'objects: .clickable');
-        // markerEl.setAttribute('emitevents', 'true');
-        // markerEl.setAttribute('cursor', 'fuse: false; rayOrigin: mouse;');
+        markerEl.setAttribute('raycaster', 'objects: .clickable');
+        markerEl.setAttribute('emitevents', 'true');
+        markerEl.setAttribute('cursor', 'fuse: false; rayOrigin: mouse;');
 
         //create entity and add as child to marker
         let model = `<a-entity
             gltf-model="#${sponsor.name}-asset" 
-            >
+            scale='1' class='clickable'>
         </a-entity>`
         markerEl.innerHTML = model
 
