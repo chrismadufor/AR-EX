@@ -67,7 +67,6 @@ AFRAME.registerComponent('markers_start',{
             </a-entity>`
             console.log('Backyard works!!')
             markerEl.innerHTML = model
-            sceneEl.appendChild(assetEl)
             sceneEl.appendChild(markerEl)
         }
     }
