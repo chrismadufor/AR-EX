@@ -1,11 +1,11 @@
 Model Information:
-* title:	Coin
-* source:	https://sketchfab.com/3d-models/coin-dfa5d2e83f9f4cb4a53fe6f109f3dbb8
-* author:	chor64 (https://sketchfab.com/chorizo6457)
+* title:	Pig Money Box
+* source:	https://sketchfab.com/3d-models/pig-money-box-76c7881a28854ca898c06b210642456e
+* author:	nomercy.rms (https://sketchfab.com/nomercy.rms)
 
 Model License:
 * license type:	CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)
 * requirements:	Author must be credited. Commercial use is allowed.
 
 If you use this 3D model in your project be sure to copy paste this credit wherever you share it:
-This work is based on "Coin" (https://sketchfab.com/3d-models/coin-dfa5d2e83f9f4cb4a53fe6f109f3dbb8) by chor64 (https://sketchfab.com/chorizo6457) licensed under CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)
+This work is based on "Pig Money Box" (https://sketchfab.com/3d-models/pig-money-box-76c7881a28854ca898c06b210642456e) by nomercy.rms (https://sketchfab.com/nomercy.rms) licensed under CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)
