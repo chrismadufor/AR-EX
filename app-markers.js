@@ -43,7 +43,7 @@ function renderMarkers(sponsors) {
         markerEl.setAttribute('preset', 'custom');
         markerEl.setAttribute('raycaster', 'objects: .clickable');
         markerEl.setAttribute('emitevents', 'true');
-        markerEl.setAttribute('cursor', 'fuse: false; rayOrigin: mouse;');
+        // markerEl.setAttribute('cursor', 'fuse: false; rayOrigin: mouse;');
 
         //create entity and add as child to marker
         let model = `<a-entity
