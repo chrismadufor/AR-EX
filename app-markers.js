@@ -48,7 +48,7 @@ function renderMarkers(sponsors) {
         //create entity and add as child to marker
         let model = `<a-entity
             gltf-model="#${sponsor.name}-asset" 
-            class = 'clickable'>
+            >
         </a-entity>`
         markerEl.innerHTML = model
 
