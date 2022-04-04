@@ -3,24 +3,24 @@
     {
       "bufferView": 2,
       "componentType": 5126,
-      "count": 46,
+      "count": 408,
       "max": [
-        1.0,
-        0.7000000476837158,
-        2.4000000953674316
+        9.680001258850098,
+        9.99999713897705,
+        1.9999998807907104
       ],
       "min": [
-        -1.0,
-        -0.7000000476837158,
-        -2.4000000953674316
+        -9.680000305175781,
+        -10.000001907348633,
+        -2.0000033378601074
       ],
       "type": "VEC3"
     },
     {
       "bufferView": 2,
-      "byteOffset": 552,
+      "byteOffset": 4896,
       "componentType": 5126,
-      "count": 46,
+      "count": 408,
       "max": [
         1.0,
         1.0,
@@ -34,145 +34,157 @@
       "type": "VEC3"
     },
     {
-      "bufferView": 3,
+      "bufferView": 1,
       "componentType": 5126,
-      "count": 46,
+      "count": 408,
       "max": [
-        0.8908599019050598,
-        0.6679202914237976,
-        0.9708536267280579,
+        0.875,
         1.0
       ],
       "min": [
-        -0.9324873089790344,
         0.0,
-        -0.9713431000709534,
-        1.0
-      ],
-      "type": "VEC4"
-    },
-    {
-      "bufferView": 1,
-      "componentType": 5126,
-      "count": 46,
-      "max": [
-        0.9932122826576233,
-        0.9935234785079956
-      ],
-      "min": [
-        0.006104662083089352,
-        0.0019629071466624737
-      ],
-      "type": "VEC2"
-    },
-    {
-      "bufferView": 1,
-      "byteOffset": 368,
-      "componentType": 5126,
-      "count": 46,
-      "max": [
-        0.9932122826576233,
-        0.9935234785079956
-      ],
-      "min": [
-        0.006104662083089352,
-        0.0019629071466624737
+        0.0
       ],
       "type": "VEC2"
     },
     {
       "bufferView": 0,
       "componentType": 5125,
-      "count": 108,
+      "count": 1176,
       "type": "SCALAR"
+    },
+    {
+      "bufferView": 3,
+      "componentType": 5126,
+      "count": 41,
+      "max": [
+        0.8333333134651184
+      ],
+      "min": [
+        0.0
+      ],
+      "type": "SCALAR"
+    },
+    {
+      "bufferView": 4,
+      "componentType": 5126,
+      "count": 41,
+      "max": [
+        8.315721475122962e-17,
+        1.0,
+        8.315721475122962e-17,
+        1.0
+      ],
+      "min": [
+        -8.65528771925435e-17,
+        -0.8526402115821838,
+        -8.65528771925435e-17,
+        -0.4817536771297455
+      ],
+      "type": "VEC4"
+    }
+  ],
+  "animations": [
+    {
+      "channels": [
+        {
+          "sampler": 0,
+          "target": {
+            "node": 5,
+            "path": "rotation"
+          }
+        }
+      ],
+      "name": "CoinObj|Coin",
+      "samplers": [
+        {
+          "input": 4,
+          "interpolation": "LINEAR",
+          "output": 5
+        }
+      ]
     }
   ],
   "asset": {
     "extras": {
-      "author": "Courvois (https://sketchfab.com/CourvoisZ)",
+      "author": "chor64 (https://sketchfab.com/chorizo6457)",
       "license": "CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)",
-      "source": "https://sketchfab.com/3d-models/low-poly-stack-of-money-632cf7dbc59a496283d1a6092dc6f9b0",
-      "title": "Low Poly Stack of Money"
+      "source": "https://sketchfab.com/3d-models/coin-dfa5d2e83f9f4cb4a53fe6f109f3dbb8",
+      "title": "Coin"
     },
-    "generator": "Sketchfab-12.64.0",
+    "generator": "Sketchfab-12.68.0",
     "version": "2.0"
   },
   "bufferViews": [
     {
       "buffer": 0,
-      "byteLength": 432,
+      "byteLength": 4704,
       "name": "floatBufferViews",
       "target": 34963
     },
     {
       "buffer": 0,
-      "byteLength": 736,
-      "byteOffset": 432,
+      "byteLength": 3264,
+      "byteOffset": 4704,
       "byteStride": 8,
       "name": "floatBufferViews",
       "target": 34962
     },
     {
       "buffer": 0,
-      "byteLength": 1104,
-      "byteOffset": 1168,
+      "byteLength": 9792,
+      "byteOffset": 7968,
       "byteStride": 12,
       "name": "floatBufferViews",
       "target": 34962
     },
     {
       "buffer": 0,
-      "byteLength": 736,
-      "byteOffset": 2272,
+      "byteLength": 164,
+      "byteOffset": 17760,
+      "name": "floatBufferViews"
+    },
+    {
+      "buffer": 0,
+      "byteLength": 656,
+      "byteOffset": 17924,
       "byteStride": 16,
-      "name": "floatBufferViews",
-      "target": 34962
+      "name": "floatBufferViews"
     }
   ],
   "buffers": [
     {
-      "byteLength": 3008,
+      "byteLength": 18580,
       "uri": "scene.bin"
-    }
-  ],
-  "images": [
-    {
-      "uri": "textures/Material_baseColor.png"
-    },
-    {
-      "uri": "textures/Material_normal.png"
     }
   ],
   "materials": [
     {
       "doubleSided": true,
-      "name": "Material",
-      "normalTexture": {
-        "index": 1,
-        "texCoord": 1
-      },
+      "name": "Coin",
       "pbrMetallicRoughness": {
-        "baseColorTexture": {
-          "index": 0
-        },
-        "metallicFactor": 0.0,
-        "roughnessFactor": 0.75
+        "baseColorFactor": [
+          0.8,
+          0.387049,
+          0.0,
+          1.0
+        ],
+        "metallicFactor": 0.5,
+        "roughnessFactor": 0.1629192073170732
       }
     }
   ],
   "meshes": [
     {
-      "name": "Object_0",
+      "name": "CoinObj_Coin_0",
       "primitives": [
         {
           "attributes": {
             "NORMAL": 1,
             "POSITION": 0,
-            "TANGENT": 2,
-            "TEXCOORD_0": 3,
-            "TEXCOORD_1": 4
+            "TEXCOORD_0": 2
           },
-          "indices": 5,
+          "indices": 3,
           "material": 0,
           "mode": 4
         }
@@ -208,67 +220,64 @@
       "children": [
         2
       ],
-      "name": "root"
+      "matrix": [
+        1.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        1.0,
+        0.0,
+        0.0,
+        -1.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        1.0
+      ],
+      "name": "dac838890acf4045a602c11254a10146.fbx"
     },
     {
       "children": [
         3
       ],
-      "matrix": [
-        1.0,
-        0.0,
-        0.0,
-        0.0,
-        0.0,
-        2.220446049250313e-16,
-        1.0,
-        0.0,
-        0.0,
-        -1.0,
-        2.220446049250313e-16,
-        0.0,
-        0.0,
-        0.0,
-        0.0,
-        1.0
-      ],
-      "name": "GLTF_SceneRootNode"
+      "name": "Object_2"
     },
     {
       "children": [
         4
       ],
-      "matrix": [
-        1.0,
-        0.0,
-        0.0,
-        0.0,
-        0.0,
-        1.0,
-        0.0,
-        0.0,
-        0.0,
-        0.0,
-        1.0,
-        0.0,
-        0.0,
-        0.698489248752594,
-        0.0,
-        1.0
+      "name": "RootNode"
+    },
+    {
+      "children": [
+        5
       ],
-      "name": "Cube_0"
+      "name": "Coin"
+    },
+    {
+      "children": [
+        6
+      ],
+      "name": "CoinObj",
+      "rotation": [
+        0.0,
+        -0.5877851843833923,
+        0.0,
+        0.8090170621871948
+      ],
+      "scale": [
+        0.9999999403953552,
+        1.0,
+        0.9999999403953552
+      ]
     },
     {
       "mesh": 0,
-      "name": "Object_4"
-    }
-  ],
-  "samplers": [
-    {
-      "magFilter": 9729,
-      "minFilter": 9987,
-      "wrapS": 10497,
-      "wrapT": 10497
+      "name": "CoinObj_Coin_0"
     }
   ],
   "scene": 0,
@@ -278,16 +287,6 @@
       "nodes": [
         0
       ]
-    }
-  ],
-  "textures": [
-    {
-      "sampler": 0,
-      "source": 0
-    },
-    {
-      "sampler": 0,
-      "source": 1
     }
   ]
 }
