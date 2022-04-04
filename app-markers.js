@@ -60,6 +60,7 @@ AFRAME.registerComponent('markers_start',{
             markerEl.setAttribute('id', `${sponsors[i].name}-marker`);
             markerEl.setAttribute('type', 'pattern');
             markerEl.setAttribute('preset', 'custom');
+            markerEl.setAttribute('markerevents', '');
             //create entity and add as child to marker
             let model = `<a-entity
             gltf-model="#coin"
@@ -71,4 +72,20 @@ AFRAME.registerComponent('markers_start',{
         }
     }
 })
+
+AFRAME.registerComponent('markerevents', {
+    init: function () {
+        const marker = this.el;
+
+        marker.addEventListener("markerFound", ()=> {
+            var markerId = marker.id;
+            console.log('Marker Found: ', markerId);
+        });
+
+        // marker.addEventListener("markerLost",() =>{
+        //     var markerId = marker.id;
+        //     console.log('Marker Lost: ', markerId);
+        // });
+    },
+});
 
