@@ -49,20 +49,20 @@ AFRAME.registerComponent('markers_start',{
             //create asset
             let assetEl = document.createElement('a-assets')
             let assetItemEl = document.createElement('a-asset-item')
-            assetItemEl.setAttribute('id', `${sponsor.name}-asset`)
-            assetItemEl.setAttribute('src', sponsor.modelUrl)
+            assetItemEl.setAttribute('id', `${sponsors[i].name}-asset`)
+            assetItemEl.setAttribute('src', sponsors[i].modelUrl)
             assetEl.appendChild(assetItemEl)
     
             //create marker
             let markerEl = document.createElement('a-marker');
             markerEl.setAttribute('type','pattern');
-            markerEl.setAttribute('url', sponsor.url);
-            markerEl.setAttribute('id', `${sponsor.name}-marker`);
+            markerEl.setAttribute('url', sponsors[i].url);
+            markerEl.setAttribute('id', `${sponsors[i].name}-marker`);
             markerEl.setAttribute('type', 'pattern');
             markerEl.setAttribute('preset', 'custom');
             //create entity and add as child to marker
             let model = `<a-entity
-            gltf-model="#${sponsor.name}-asset"
+            gltf-model="#${sponsors[i].name}-asset"
             scale="2">
             </a-entity>`
             console.log('Backyard works!!')
