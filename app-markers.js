@@ -31,7 +31,7 @@ function loadSponsors() {
 // 2. click: open modal that gives feedback.
 
 AFRAME.registerComponent('markers_start',{
-	init:function(sponsors){
+	init:function(){
         console.log('Init function loaded')
         let sceneEl = document.querySelector('a-scene');
     
