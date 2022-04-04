@@ -38,17 +38,17 @@ function renderMarkers(sponsors) {
         markerEl.setAttribute('type','pattern');
         markerEl.setAttribute('url', sponsor.url);
         markerEl.setAttribute('id', `${sponsor.name}-marker`);
+        markerEl.setAttribute('preset', 'custom');
         // markerEl.setAttribute('smooth', 'true');
         // markerEl.setAttribute('smoothCount', '10');
-        markerEl.setAttribute('preset', 'custom');
-        markerEl.setAttribute('raycaster', 'objects: .clickable');
-        markerEl.setAttribute('emitevents', 'true');
+        // markerEl.setAttribute('raycaster', 'objects: .clickable');
+        // markerEl.setAttribute('emitevents', 'true');
         // markerEl.setAttribute('cursor', 'fuse: false; rayOrigin: mouse;');
 
         //create entity and add as child to marker
         let model = `<a-entity
             gltf-model="#${sponsor.name}-asset" 
-            scale='1' class='clickable'>
+            scale='2'>
         </a-entity>`
         markerEl.innerHTML = model
 
