@@ -74,18 +74,22 @@ AFRAME.registerComponent('markers_start',{
 })
 
 AFRAME.registerComponent('markerevents', {
-    init: function () {
-        const marker = this.el;
+    init: function() {
+        const animatedMarker = document.querySelector("#animated-marker");
+        const aEntity = document.querySelector("#animated-model");
 
-        marker.addEventListener("markerFound", ()=> {
-            var markerId = marker.id;
-            console.log('Marker Found: ', markerId);
-        });
+        console.log('animated-marker', animatedMarker)
+        console.log('a-entity', aEntity)
 
-        // marker.addEventListener("markerLost",() =>{
-        //     var markerId = marker.id;
-        //     console.log('Marker Lost: ', markerId);
+        // every click, we make our model grow in size :)
+        // animatedMarker.addEventListener('click', function(ev, target){
+        //     const intersectedElement = ev && ev.detail && ev.detail.intersectedEl;
+        //     if (aEntity && intersectedElement === aEntity) {
+        //         const scale = aEntity.getAttribute('scale');
+        //         Object.keys(scale).forEach((key) => scale[key] = scale[key] + 1);
+        //         aEntity.setAttribute('scale', scale);
+        //     }
         // });
-    },
+    }
 });
 
