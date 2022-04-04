@@ -1,4 +1,8 @@
 // Get array of objects of the sponsors
+let sponsors;
+window.onload = () => {
+    sponsors = loadSponsors();
+};
 
 console.log('File Loaded')
 
@@ -27,8 +31,7 @@ function loadSponsors() {
 // 2. click: open modal that gives feedback.
 
 AFRAME.registerComponent('markers_start',{
-	init:function(){
-        loadSponsors()
+	init:function(sponsors){
         console.log('Init function loaded')
         let sceneEl = document.querySelector('a-scene');
     
