@@ -1,0 +1,11 @@
+Model Information:
+* title:	Football
+* source:	https://sketchfab.com/3d-models/football-072a7e8d610f4143aa510256112d97cf
+* author:	BSlegt (https://sketchfab.com/BSlegt)
+
+Model License:
+* license type:	CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)
+* requirements:	Author must be credited. Commercial use is allowed.
+
+If you use this 3D model in your project be sure to copy paste this credit wherever you share it:
+This work is based on "Football" (https://sketchfab.com/3d-models/football-072a7e8d610f4143aa510256112d97cf) by BSlegt (https://sketchfab.com/BSlegt) licensed under CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)
