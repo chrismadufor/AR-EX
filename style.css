@@ -1,16 +1,82 @@
+@import url('https://fonts.googleapis.com/css2?family=Balsamiq+Sans&family=Bowlby+One+SC&family=Bungee&family=Monoton&display=swap');
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+h1, h2, h3 {
+    font-family: 'Bungee';
+}
+
+p {
+    font-family: 'Balsamiq Sans';
+}
+
 .instructions {
     position: fixed;
     top: 0;
     right: 0;
-    background-color: blueviolet;
     color: white;
-    padding: 20px 0;
     width: 100%;
     font-size: 20px;
     text-transform: uppercase;
     text-align: center;
 }
+
 img {
     width: 100%;
     display: block;
+}
+
+/* Prize Page */
+
+body#prize {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+}
+
+.prize-header {
+    position: fixed;
+    top: 0;
+    width: 100%;
+}
+
+.page-title {
+    font-size: 24px;
+    text-align: center;
+    margin-bottom: 20px;
+    color: #0F2344;
+}
+
+.prize-body {
+    width: 90%;
+    margin: 0 auto;
+    max-width: 350px;
+}
+
+.prize-message {
+    text-align: center;
+    font-size: 18px;
+    line-height: 2;
+    color: #32353b;
+}
+
+.prize-body button {
+    display: block;
+    background-color: #0F2344;
+    color: white;
+    margin: 10px auto 0;
+    padding: 10px 30px;
+    border: none;
+    border-radius: 5px;
+}
+
+#company-logo {
+    width: 80%;
+    max-width: 200px;
+    margin: 0 auto 20px;
 }

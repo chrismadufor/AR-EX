@@ -76,7 +76,9 @@ AFRAME.registerComponent('markers_start',{
         animatedMarkers.forEach((marker, index) => {
             const aEntity = marker.querySelector(".animated-model");
 
-            marker
+            marker.addEventListener('markerfound', ()=>{
+                console.log('markerfound', marker.id)
+            })
 
         })
     }
