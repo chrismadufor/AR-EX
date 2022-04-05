@@ -72,16 +72,21 @@ AFRAME.registerComponent('markers_start',{
             markerEl.innerHTML = model
             sceneEl.appendChild(markerEl)
         }
+
+        const animatedMarkers = document.querySelectorAll(".animated-marker");
+
+        animatedMarkers.forEach((marker, index) => {
+            const aEntity = marker.querySelector(".animated-model");
+
+            console.log(`marker ${index}`, aEntity)
+
+        })
     }
 })
 
 AFRAME.registerComponent('markerevents', {
     init: function() {
-        const animatedMarker = document.querySelectorAll(".animated-marker");
-        const aEntity = document.querySelector(".animated-model");
-
-        console.log('animated-marker', animatedMarker)
-        console.log('a-entity', aEntity)
+        
 
         // every click, we make our model grow in size :)
         // animatedMarker.addEventListener('click', function(ev, target){
