@@ -8,7 +8,7 @@
     />
     <script src='https://cdn.jsdelivr.net/gh/aframevr/aframe@1c2407b26c61958baa93967b5412487cd94b290b/dist/aframe-master.min.js'></script>
     <script src='js/aframe-ar-nft.js'></script>
-    <script src="app-markers.js"></script>
+    <script src="app-markers1.js"></script>
     <link rel="stylesheet" type="text/css" href="./style.css" />
   </head>
   <body style='margin : 0px; overflow: hidden;'>
@@ -17,6 +17,7 @@
      <div>Loading, please wait...</div>
    </div>
      <a-scene
+        markers_start
          vr-mode-ui='enabled: false;'
          renderer="logarithmicDepthBuffer: true; precision: medium;"
          embedded arjs='trackingMethod: best; sourceType: webcam; debugUIEnabled: false;'>
@@ -33,6 +34,7 @@
              </a-entity>
          </a-nft> -->
          <a-nft
+            id="animated-marker"
             type='nft' url='assets/trex/trex-image/trex'
             smooth='true' smoothCount='10' smoothTolerance='0.01' smoothThreshold='5'>
             <a-entity

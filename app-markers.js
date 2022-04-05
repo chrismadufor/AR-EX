@@ -41,52 +41,54 @@ AFRAME.registerComponent('markers_start',{
         ]
 
         console.log('Init function loaded')
-        let sceneEl = document.querySelector('a-scene');
+        // let sceneEl = document.querySelector('a-scene');
     
-        for (i=0; i<sponsors.length; i++){
-            //create asset
-            // let assetEl = document.createElement('a-assets')
-            // let assetItemEl = document.createElement('a-asset-item')
-            // assetItemEl.setAttribute('id', `${sponsors[i].name}-asset`)
-            // assetItemEl.setAttribute('src', sponsors[i].modelUrl)
-            // assetEl.appendChild(assetItemEl)
+        // for (i=0; i<sponsors.length; i++){
+        //     //create asset
+        //     // let assetEl = document.createElement('a-assets')
+        //     // let assetItemEl = document.createElement('a-asset-item')
+        //     // assetItemEl.setAttribute('id', `${sponsors[i].name}-asset`)
+        //     // assetItemEl.setAttribute('src', sponsors[i].modelUrl)
+        //     // assetEl.appendChild(assetItemEl)
     
-            //create marker
-            let markerEl = document.createElement('a-marker');
-            markerEl.setAttribute('type','pattern');
-            markerEl.setAttribute('url', sponsors[i].url);
-            markerEl.setAttribute('id', `${sponsors[i].name}-marker`);
-            markerEl.setAttribute('class', 'animated-marker');
-            markerEl.setAttribute('type', 'pattern');
-            markerEl.setAttribute('preset', 'custom');
-            markerEl.setAttribute('emitevents', 'true');
-            markerEl.setAttribute('markerevents', '');
-            //create entity and add as child to marker
-            let model = `<a-entity
-            gltf-model="#coin"
-            rotation="0 180 0" scale="2 2 2" class="animated-model">
-            </a-entity>`
-            console.log('Backyard works!!')
-            markerEl.innerHTML = model
-            sceneEl.appendChild(markerEl)
-        }
+        //     //create marker
+        //     let markerEl = document.createElement('a-marker');
+        //     markerEl.setAttribute('type','pattern');
+        //     markerEl.setAttribute('url', sponsors[i].url);
+        //     markerEl.setAttribute('id', `${sponsors[i].name}-marker`);
+        //     markerEl.setAttribute('class', 'animated-marker');
+        //     markerEl.setAttribute('type', 'pattern');
+        //     markerEl.setAttribute('preset', 'custom');
+        //     markerEl.setAttribute('emitevents', 'true');
+        //     markerEl.setAttribute('markerevents', '');
+        //     //create entity and add as child to marker
+        //     let model = `<a-entity
+        //     gltf-model="#coin"
+        //     rotation="0 180 0" scale="2 2 2" class="animated-model">
+        //     </a-entity>`
+        //     console.log('Backyard works!!')
+        //     markerEl.innerHTML = model
+        //     sceneEl.appendChild(markerEl)
+        // }
 
         const animatedMarkers = document.querySelectorAll(".animated-marker");
 
         animatedMarkers.forEach((marker, index) => {
-            const claimBtn = document.querySelector('.claim-btn')
-            const aEntity = marker.querySelector(".animated-model");
+            // const claimBtn = document.querySelector('.claim-btn')
+            // const aEntity = marker.querySelector(".animated-model");
 
             marker.addEventListener('markerFound', ()=>{
-                claimBtn.style.display = 'block'
-                claimBtn.addEventListener('click', ()=>{
-                    console.log('marker found', marker.id)
-                    window.location.assign('prize.html')
-                })
+                // claimBtn.style.display = 'block'
+                // claimBtn.addEventListener('click', ()=>{
+                //     console.log('marker found', marker.id)
+                //     window.location.assign('prize.html')
+                // })
+                console.log('Marker found')
             })
 
             marker.addEventListener('markerLost', ()=>{
-                claimBtn.style.display = 'none'
+                // claimBtn.style.display = 'none'
+                console.log('Marker lost')
             })
 
         })
