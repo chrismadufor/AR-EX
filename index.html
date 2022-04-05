@@ -6,31 +6,33 @@
       name="description"
       content="AR experience for Sporting Lagos home Game day"
     />
-    <script src="https://aframe.io/releases/1.0.0/aframe.min.js"></script>
-    <script src="https://raw.githack.com/AR-js-org/AR.js/master/aframe/build/aframe-ar.js"></script>
-    <script src="https://raw.githack.com/donmccurdy/aframe-extras/master/dist/aframe-extras.loaders.min.js"></script>
+    <script src='https://cdn.jsdelivr.net/gh/aframevr/aframe@1c2407b26c61958baa93967b5412487cd94b290b/dist/aframe-master.min.js'></script>
+    <script src='js/aframe-ar-nft.js'></script>
     <script src="app-markers.js"></script>
     <link rel="stylesheet" type="text/css" href="./style.css" />
   </head>
-  <body style="margin: 0; overflow: hidden">
-    <div class="centered instructions">
-      <img src="img/spbanner.png" alt="">
-    </div>
-    <a-scene
-      markers_start
-      vr-mode-ui="enabled: false"
-      color-space="sRGB"
-      renderer="gammaOutput: true"
-      embedded
-      arjs="debugUIEnabled: false; sourceType: webcam; patternRatio: 0.85; trackingMethod: best;"
-    >
-      <a-assets>
-        <a-asset-item id="coin" src="assets/models/piggyvest/scene.gltf"></a-asset-item>
-      </a-assets>
-      <a-entity id="userCamera" camera>
-        <a-cursor></a-cursor>
-      </a-entity>
-    </a-scene>
-    <button class="claim-btn">CLAIM</button>
-  </body>
+  <body style='margin : 0px; overflow: hidden;'>
+    <!-- minimal loader shown until image descriptors are loaded -->
+   <div class="arjs-loader">
+     <div>Loading, please wait...</div>
+   </div>
+     <a-scene
+         vr-mode-ui='enabled: false;'
+         renderer="logarithmicDepthBuffer: true; precision: medium;"
+         embedded arjs='trackingMethod: best; sourceType: webcam; debugUIEnabled: false;'>
+ 
+         <!-- use rawgithack to retrieve the correct url for nft marker (see 'pinball' below) -->
+         <a-nft
+             type='nft' url='assets/trex/trex-image/trex'
+             smooth='true' smoothCount='10' smoothTolerance='0.01' smoothThreshold='5'>
+             <a-entity
+                 gltf-model='assets/trex/trex-image/trex/scene.gltf'
+                 scale="5 5 5"
+                 position="150 300 -100"
+                 >
+             </a-entity>
+         </a-nft>
+     <a-entity camera></a-entity>
+     </a-scene>
+ </body>
 </html>
