@@ -58,13 +58,15 @@ AFRAME.registerComponent('markers_start',{
             markerEl.setAttribute('type','pattern');
             markerEl.setAttribute('url', sponsors[i].url);
             markerEl.setAttribute('id', `${sponsors[i].name}-marker`);
+            markerEl.setAttribute('class', 'animated-marker');
             markerEl.setAttribute('type', 'pattern');
             markerEl.setAttribute('preset', 'custom');
+            markerEl.setAttribute('emitevents', 'true');
             markerEl.setAttribute('markerevents', '');
             //create entity and add as child to marker
             let model = `<a-entity
             gltf-model="#coin"
-            rotation="0 180 0" scale="2 2 2">
+            rotation="0 180 0" scale="2 2 2" class="animated-model">
             </a-entity>`
             console.log('Backyard works!!')
             markerEl.innerHTML = model
@@ -75,8 +77,8 @@ AFRAME.registerComponent('markers_start',{
 
 AFRAME.registerComponent('markerevents', {
     init: function() {
-        const animatedMarker = document.querySelector("#animated-marker");
-        const aEntity = document.querySelector("#animated-model");
+        const animatedMarker = document.querySelectorAll(".animated-marker");
+        const aEntity = document.querySelector(".animated-model");
 
         console.log('animated-marker', animatedMarker)
         console.log('a-entity', aEntity)
