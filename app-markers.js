@@ -84,6 +84,10 @@ AFRAME.registerComponent('markers_start',{
                 })
             })
 
+            marker.addEventListener('markerLost', ()=>{
+                claimBtn.style.display = 'none'
+            })
+
         })
     }
 })
