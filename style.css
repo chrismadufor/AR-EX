@@ -4,6 +4,7 @@
     padding: 0;
     margin: 0;
     box-sizing: border-box;
+    font-family: 'Balsamiq Sans';
 }
 
 h1, h2, h3 {
@@ -28,6 +29,17 @@ p {
 img {
     width: 100%;
     display: block;
+}
+
+.claim-btn {
+    height: 50px;
+    width: 100%;
+    background-color: #0F2344;
+    color: white;
+    font-size: 18px;
+    position: fixed;
+    bottom: 0;
+    left: 0;
 }
 
 /* Prize Page */
