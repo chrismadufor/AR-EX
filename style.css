@@ -36,10 +36,11 @@ img {
     width: 100%;
     background-color: #0F2344;
     color: white;
-    font-size: 18px;
+    font-size: 20px;
     position: fixed;
     bottom: 0;
     left: 0;
+    border: none;
 }
 
 /* Prize Page */
