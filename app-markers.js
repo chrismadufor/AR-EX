@@ -81,6 +81,7 @@ AFRAME.registerComponent('markers_start',{
                 claimBtn.style.display = 'block'
                 claimBtn.addEventListener('click', ()=>{
                     console.log('marker found', marker.id)
+                    window.location.assign('prize.html')
                 })
             })
 
