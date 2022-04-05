@@ -1,6 +1,7 @@
 .instructions {
     position: fixed;
     top: 0;
+    right: 0;
     background-color: blueviolet;
     color: white;
     padding: 20px 0;
