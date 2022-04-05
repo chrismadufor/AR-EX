@@ -41,6 +41,8 @@ img {
     bottom: 0;
     left: 0;
     border: none;
+    letter-spacing: 5px;
+    display: none;
 }
 
 /* Prize Page */

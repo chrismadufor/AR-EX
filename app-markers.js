@@ -74,10 +74,14 @@ AFRAME.registerComponent('markers_start',{
         const animatedMarkers = document.querySelectorAll(".animated-marker");
 
         animatedMarkers.forEach((marker, index) => {
+            const claimBtn = document.querySelector('.claim-btn')
             const aEntity = marker.querySelector(".animated-model");
 
             marker.addEventListener('markerFound', ()=>{
-                
+                claimBtn.style.display = 'block'
+                claimBtn.addEventListener('click', ()=>{
+                    console.log('marker found', marker.id)
+                })
             })
 
         })
