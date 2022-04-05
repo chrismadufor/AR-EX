@@ -49,9 +49,9 @@ AFRAME.registerComponent('markers_start',{
     }
 })
 
-console.log('nftss')
 
-let marker = document.getElementById('#animated-marker')
+let marker = document.querySelector('a-nft')
+console.log(marker)
 
 marker.addEventListener('markerFound', ()=>{
     console.log('Marker found')
