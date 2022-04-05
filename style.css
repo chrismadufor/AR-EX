@@ -3,7 +3,8 @@
     top: 0;
     background-color: blueviolet;
     color: white;
-    padding-inline-end: 20px 0;
+    padding: 20px 0;
+    width: 100%;
     font-size: 20px;
     text-transform: uppercase;
     text-align: center;
