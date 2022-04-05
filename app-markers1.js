@@ -48,15 +48,3 @@ AFRAME.registerComponent('markers_start',{
         })
     }
 })
-
-
-let marker = document.querySelector('a-nft')
-console.log(marker)
-
-marker.addEventListener('markerFound', ()=>{
-    console.log('Marker found')
-})
-
-marker.addEventListener('markerLost', ()=>{
-    console.log('Marker lost')
-})
