@@ -6,13 +6,11 @@ function loadSponsors() {
     {
         name: 'paystack',
         url: 'assets/markers/paystack-marker1.patt',
-        modelUrl: 'assets/models/paystack/scene.gltf',
         message: 'Hi, Paystack is amazing!'
     },
     {
         name: 'piggyvest',
         url: 'assets/markers/piggyvest-marker1.patt',
-        modelUrl: 'assets/models/piggyvest/scene.gltf',
         message: 'Hi, hit your savings targets with Piggyvest'
     },
 ]}
@@ -78,7 +76,7 @@ AFRAME.registerComponent('markers_start',{
         animatedMarkers.forEach((marker, index) => {
             const aEntity = marker.querySelector(".animated-model");
 
-            console.log(`marker ${index}`, aEntity)
+            marker
 
         })
     }
