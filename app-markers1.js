@@ -49,7 +49,9 @@ AFRAME.registerComponent('markers_start',{
     }
 })
 
-let marker = document.querySelector('#animated-marker')
+console.log('nftss')
+
+let marker = document.getElementById('#animated-marker')
 
 marker.addEventListener('markerFound', ()=>{
     console.log('Marker found')
