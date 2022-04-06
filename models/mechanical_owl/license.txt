@@ -1,0 +1,11 @@
+Model Information:
+* title:	Mechanical Owl
+* source:	https://sketchfab.com/3d-models/mechanical-owl-50a39a2b16fe48a28f65ad6cea91563e
+* author:	SatiKudasati (https://sketchfab.com/SatiKudasati)
+
+Model License:
+* license type:	CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)
+* requirements:	Author must be credited. Commercial use is allowed.
+
+If you use this 3D model in your project be sure to copy paste this credit wherever you share it:
+This work is based on "Mechanical Owl" (https://sketchfab.com/3d-models/mechanical-owl-50a39a2b16fe48a28f65ad6cea91563e) by SatiKudasati (https://sketchfab.com/SatiKudasati) licensed under CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)

@@ -1,138 +1,58 @@
-<!DOCTYPE html>
 <html>
   <head>
-    <title>Sporting Lagos AR Gameday Experience</title>
-    <meta
-      name="description"
-      content="AR experience for Sporting Lagos home Game day"
-    />
-    <script src='https://cdn.jsdelivr.net/gh/aframevr/aframe@1c2407b26c61958baa93967b5412487cd94b290b/dist/aframe-master.min.js'></script>
-    <script src='js/aframe-ar-nft.js'></script>
-    <script src="app-markers1.js"></script>
-    <link rel="stylesheet" type="text/css" href="./style.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <script src="https://cdn.jsdelivr.net/gh/hiukim/mind-ar-js@1.1.4/dist/mindar-image.prod.js"></script>
+    <script src="https://aframe.io/releases/1.2.0/aframe.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/gh/donmccurdy/aframe-extras@v6.1.1/dist/aframe-extras.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/gh/hiukim/mind-ar-js@1.1.4/dist/mindar-image-aframe.prod.js"></script>
   </head>
-  <body style='margin : 0px; overflow: hidden;'>
-    <div class="centered instructions">
-      <img src="img/spbanner.png" alt="">
-    </div>
-    <!-- minimal loader shown until image descriptors are loaded -->
-   <div class="arjs-loader">
-     <div>Loading, please wait...</div>
-   </div>
-     <a-scene
-        markers_start
-         vr-mode-ui='enabled: false;'
-         renderer="logarithmicDepthBuffer: true; precision: medium;"
-         embedded arjs='trackingMethod: best; sourceType: webcam; debugUIEnabled: false;'>
- 
-         <!-- use rawgithack to retrieve the correct url for nft marker (see 'pinball' below) -->
-         <a-nft
-             type='nft' url='assets/nft-markers/gametimedark'
-             smooth='true' smoothCount='10' smoothTolerance='0.01' smoothThreshold='5'>
-             <a-entity
-                 gltf-model='assets/trex/scene.gltf'
-                 scale="20 20 20"
-                 position="0 0 0"
-                 >
-             </a-entity>
-         </a-nft>
-         <a-nft
-            id="animated-marker"
-            type='nft' url='assets/nft-markers/gametime'
-            emitevents="true"
-            smooth='true' smoothCount='10' smoothTolerance='0.01' smoothThreshold='5'>
-            <a-entity
-                gltf-model='assets/football/scene.gltf'
-                scale="2 2 2"
-                position="0 0 0"
-                >
-            </a-entity>
-        </a-nft>
-         <a-nft
-            id="animated-marker"
-            type='nft' url='assets/nft-markers/burgerking'
-            emitevents="true"
-            smooth='true' smoothCount='10' smoothTolerance='0.01' smoothThreshold='5'>
-            <a-entity
-                gltf-model='assets/coin/scene.gltf'
-                scale="150 150 150"
-                position="0 0 0"
-                >
-            </a-entity>
-        </a-nft>
-        <a-nft
-            id="animated-marker"
-            type='nft' url='assets/nft-markers/burgerking2'
-            emitevents="true"
-            smooth='true' smoothCount='10' smoothTolerance='0.01' smoothThreshold='5'>
-            <a-entity
-                gltf-model='assets/coin/scene.gltf'
-                scale="150 150 150"
-                position="0 0 0"
-                >
-            </a-entity>
-        </a-nft>
-        <a-nft
-            id="animated-marker"
-            type='nft' url='assets/nft-markers/piggyvest'
-            emitevents="true"
-            smooth='true' smoothCount='10' smoothTolerance='0.01' smoothThreshold='5'>
-            <a-entity
-                gltf-model='assets/piggybank/scene.gltf'
-                scale="60 60 60"
-                position="0 50 0"
-                >
-            </a-entity>
-        </a-nft>
-        <a-nft
-            id="animated-marker"
-            type='nft' url='assets/nft-markers/piggyvest2'
-            emitevents="true"
-            smooth='true' smoothCount='10' smoothTolerance='0.01' smoothThreshold='5'>
-            <a-entity
-                gltf-model='assets/piggybank/scene.gltf'
-                scale="100 100 100"
-                position="0 50 0"
-                >
-            </a-entity>
-        </a-nft>
-        <a-nft
-            id="animated-marker"
-            type='nft' url='assets/nft-markers/sportinglagos'
-            emitevents="true"
-            smooth='true' smoothCount='10' smoothTolerance='0.01' smoothThreshold='5'>
-            <a-entity
-                gltf-model='assets/football/scene.gltf'
-                scale="50 50 50"
-                position="0 0 0"
-                >
-            </a-entity>
-        </a-nft>
-        <a-nft
-            id="animated-marker"
-            type='nft' url='assets/nft-markers/sportinglagoswhite'
-            emitevents="true"
-            smooth='true' smoothCount='10' smoothTolerance='0.01' smoothThreshold='5'>
-            <a-entity
-                gltf-model='assets/football/scene.gltf'
-                scale="80 80 80"
-                position="0 50 0"
-                >
-            </a-entity>
-        </a-nft>
-        <a-nft
-            id="animated-marker"
-            type='nft' url='assets/nft-markers/thisislagos'
-            emitevents="true"
-            smooth='true' smoothCount='10' smoothTolerance='0.01' smoothThreshold='5'>
-            <a-entity
-                gltf-model='assets/trex/scene.gltf'
-                scale="50 50 50"
-                position="0 50 0"
-                >
-            </a-entity>
-        </a-nft>
-     <a-entity camera></a-entity>
-     </a-scene>
- </body>
+  <body>
+    <a-scene mindar-image="imageTargetSrc: ./targets.mind;" color-space="sRGB" renderer="colorManagement: true, physicallyCorrectLights" vr-mode-ui="enabled: false" device-orientation-permission-ui="enabled: false">
+      <a-assets>
+        <a-asset-item id="burger" src="models/burger/scene.gltf"></a-asset-item>
+        <a-asset-item id="cheeseBurger" src="models/cheese_burger/scene.gltf"></a-asset-item>
+        <a-asset-item id="mechanicalOwl" src="models/mechanical_owl/scene.gltf"></a-asset-item>
+        <a-asset-item id="gift" src="models/gift/scene.gltf"></a-asset-item>
+        <a-asset-item id="piggybank" src="models/piggybank/scene.gltf"></a-asset-item>
+        <a-asset-item id="piggybank1" src="models/piggybank1/scene.gltf"></a-asset-item>
+        <a-asset-item id="football" src="models/football/scene.gltf"></a-asset-item>
+        <a-asset-item id="coin" src="models/coin/scene.gltf"></a-asset-item>
+        <a-asset-item id="money" src="models/money/scene.gltf"></a-asset-item>
+        <a-asset-item id="goldCoin" src="models/gold_coin/scene.gltf"></a-asset-item>
+      </a-assets>
+
+      <a-camera position="0 0 0" look-controls="enabled: false"></a-camera>
+
+      <a-entity mindar-image-target="targetIndex: 0">
+        <a-gltf-model rotation="0 0 0 " position="0 -0.25 0" scale="0.3 0.3 0.3" src="#burger" animation-mixer>
+      </a-entity>
+      <a-entity mindar-image-target="targetIndex: 1">
+        <a-gltf-model rotation="0 0 0 " position="0 -0.25 0" scale="0.3 0.3 0.3" src="#cheeseBurger" animation-mixer>
+      </a-entity>
+      <a-entity mindar-image-target="targetIndex: 2">
+        <a-gltf-model rotation="0 0 0 " position="0 -0.25 0" scale="0.002 0.002 0.002" src="#mechanicalOwl" animation-mixer>
+      </a-entity>
+      <a-entity mindar-image-target="targetIndex: 3">
+        <a-gltf-model rotation="0 0 0 " position="0 -0.25 0" scale="0.002 0.002 0.002" src="#gift" animation-mixer>
+      </a-entity>
+      <a-entity mindar-image-target="targetIndex: 4">
+        <a-gltf-model rotation="0 0 0 " position="0 -0.25 0" scale="0.8 0.8 0.8" src="#piggybank" animation-mixer>
+      </a-entity>
+      <a-entity mindar-image-target="targetIndex: 5">
+        <a-gltf-model rotation="0 0 0 " position="0 -0.25 0" scale="1 1 1" src="#piggybank1" animation-mixer>
+      </a-entity>
+      <a-entity mindar-image-target="targetIndex: 6">
+        <a-gltf-model rotation="0 0 0 " position="0 -0.25 0" scale="0.005 0.005 0.005" src="#football" animation-mixer>
+      </a-entity>
+      <a-entity mindar-image-target="targetIndex: 7">
+        <a-gltf-model rotation="0 0 0 " position="0 -0.25 0" scale="0.05 0.05 0.05" src="#coin" animation-mixer>
+      </a-entity>
+      <a-entity mindar-image-target="targetIndex: 8">
+        <a-gltf-model rotation="0 0 0 " position="0 -0.25 0" scale="0.05 0.05 0.05" src="#money" animation-mixer>
+      </a-entity>
+      <a-entity mindar-image-target="targetIndex: 9">
+        <a-gltf-model rotation="0 0 0 " position="0 -0.25 0" scale="0.5 0.5 0.5" src="#goldCoin" animation-mixer>
+      </a-entity>
+    </a-scene>
+  </body>
 </html>
