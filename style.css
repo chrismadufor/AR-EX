@@ -21,15 +21,15 @@ p {
     right: 0;
     color: white;
     width: 100%;
-    max-height: 70px;
+    max-height: 100px;
     font-size: 20px;
     text-transform: uppercase;
     text-align: center;
 }
 
-img {
+.instructions img {
     width: 100%;
-    max-height: 70px;
+    max-height: 100px;
     display: block;
     object-fit: cover;
 }
