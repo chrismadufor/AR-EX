@@ -27,7 +27,7 @@ p {
     text-align: center;
 }
 
-.instructions img {
+img {
     width: 100%;
     max-height: 100px;
     display: block;
@@ -44,11 +44,20 @@ p {
     bottom: 0;
     left: 0;
     border: none;
-    letter-spacing: 5px;
+    letter-spacing: 3px;
     display: none;
+    z-index: 5;
+}
+
+a-entity {
+    z-index: 5;
 }
 
 /* Prize Page */
+
+.relative {
+    position: relative;
+}
 
 body#prize {
     display: flex;

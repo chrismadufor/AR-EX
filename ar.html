@@ -1,0 +1,64 @@
+<html>
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <script src="https://cdn.jsdelivr.net/gh/hiukim/mind-ar-js@1.1.4/dist/mindar-image.prod.js"></script>
+    <script src="https://aframe.io/releases/1.2.0/aframe.min.js"></script>
+    <!-- <script src="https://cdn.jsdelivr.net/gh/donmccurdy/aframe-extras@v6.1.1/dist/aframe-extras.min.js"></script> -->
+    <script src="https://cdn.jsdelivr.net/gh/hiukim/mind-ar-js@1.1.4/dist/mindar-image-aframe.prod.js"></script>
+    <script src="index.js"></script>
+    <link rel="stylesheet" href="style.css">
+  </head>
+  <body>
+    <div class="centered instructions">
+        <img src="img/spbanner.png" alt="" />
+    </div>
+    <button class="claim-btn">Claim Prize 🎁</button>
+    <a-scene mindar-image="imageTargetSrc: ./targets.mind" color-space="sRGB" renderer="colorManagement: true, physicallyCorrectLights" vr-mode-ui="enabled: false" device-orientation-permission-ui="enabled: false">
+      <a-assets>
+        <a-asset-item id="burger" src="models/burger/scene.gltf"></a-asset-item>
+        <a-asset-item id="cheeseBurger" src="models/cheese_burger/scene.gltf"></a-asset-item>
+        <a-asset-item id="football1" src="models/football1/scene.gltf"></a-asset-item>
+        <a-asset-item id="gift" src="models/gift/scene.gltf"></a-asset-item>
+        <a-asset-item id="piggybank" src="models/piggybank/scene.gltf"></a-asset-item>
+        <a-asset-item id="piggybank1" src="models/piggybank1/scene.gltf"></a-asset-item>
+        <a-asset-item id="football" src="models/football/scene.gltf"></a-asset-item>
+        <a-asset-item id="coin" src="models/coin/scene.gltf"></a-asset-item>
+        <a-asset-item id="money" src="models/money/scene.gltf"></a-asset-item>
+        <a-asset-item id="goldCoin" src="models/gold_coin/scene.gltf"></a-asset-item>
+      </a-assets>
+
+      <a-camera position="0 0 0" look-controls="enabled: false" cursor="fuse: false; rayOrigin: mouse;" raycaster="far: ${customFields.libVersion}; objects: .clickable"></a-camera>
+
+      <a-entity mindar-image-target="targetIndex: 0">
+        <a-gltf-model class="clickable" rotation="0 0 0 " position="0 -0.25 0" scale="0.3 0.3 0.3" src="#burger" animation-mixer>
+      </a-entity>
+      <a-entity mindar-image-target="targetIndex: 1">
+        <a-gltf-model class="clickable" rotation="0 0 0 " position="0 -0.25 0" scale="0.3 0.3 0.3" src="#cheeseBurger" animation-mixer>
+      </a-entity>
+      <a-entity mindar-image-target="targetIndex: 2">
+        <a-gltf-model class="clickable" rotation="0 0 0 " position="0 0 0" scale="0.005 0.005 0.005" src="#football1" animation-mixer>
+      </a-entity>
+      <a-entity mindar-image-target="targetIndex: 3">
+        <a-gltf-model class="clickable" rotation="0 0 0 " position="0 -0.25 0" scale="0.002 0.002 0.002" src="#gift" animation-mixer>
+      </a-entity>
+      <a-entity mindar-image-target="targetIndex: 4">
+        <a-gltf-model class="clickable" rotation="0 0 0 " position="0 0 0" scale="0.8 0.8 0.8" src="#piggybank" animation-mixer>
+      </a-entity>
+      <a-entity mindar-image-target="targetIndex: 5" id="piggyWrap" class="relative">
+        <a-gltf-model id="piggy" class="clickable" rotation="0 0 0 " position="0 0 0" scale="1 1 1" src="#piggybank1" animation-mixer>
+      </a-entity>
+      <a-entity mindar-image-target="targetIndex: 6">
+        <a-gltf-model class="clickable" rotation="0 0 0 " position="0 0 0" scale="0.005 0.005 0.005" src="#football" animation-mixer>
+      </a-entity>
+      <a-entity mindar-image-target="targetIndex: 7">
+        <a-gltf-model class="clickable" rotation="0 0 0 " position="0 0 0" scale="0.02 0.02 0.02" src="#coin" animation-mixer>
+      </a-entity>
+      <a-entity mindar-image-target="targetIndex: 8">
+        <a-gltf-model class="clickable" rotation="0 0 0 " position="0 0 0" scale="0.05 0.05 0.05" src="#money" animation-mixer>
+      </a-entity>
+      <a-entity mindar-image-target="targetIndex: 9">
+        <a-gltf-model class="clickable" rotation="0 0 0 " position="0 -0.25 0" scale="0.5 0.5 0.5" src="#goldCoin" animation-mixer>
+      </a-entity>
+    </a-scene>
+  </body>
+</html>
