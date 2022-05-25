@@ -4,12 +4,17 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
     <title>Welcome to the Experience</title>
     <style>
         body {
             background-color: rgb(3, 3, 58);
+            background-image: linear-gradient(rgb(3, 3, 58, 0.8), rgb(3, 3, 58, 0.4), rgb(3, 3, 58, 0.8)), url(img/ar-bg.jpg);
+            background-position: center;
+            background-size: cover;
+        }
+        .main-body {
             color: white;
-            font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
             padding: 0 30px;
             height: 100vh;
             display: flex;
@@ -20,27 +25,37 @@
         h1 {
             font-size: 32px;
             text-align: center;
+            font-weight: 500;
+            /* color: rgb(3, 3, 58); */
         }
         p{
             font-size: 16px;
             text-align: center;
             line-height: 1.5;
+            margin: 20px 0;
         }
         button {
             background-color: orange;
             border: none;
-            padding: 8px 30px;
+            padding: 10px 30px;
             font-size: 16px;
             display: block;
             margin: 0 auto;
+            color: white;
         }
     </style>
 </head>
 <body>
-    <h1>Hi and welcome to the AR Experience!</h1>
-    <p>Scan random logos around the stadium to reveal amazing objects and stand the change to win fantasic prizes.</p>
-    <button onclick="goToArPage();">Get Started</button>
-    <p id="error-text"></p>
+    <div class="centered instructions">
+        <img src="img/spbanner.png" alt="" />
+    </div>
+    <div class="main-body">
+        <h1>Hi and welcome to the AR Experience!</h1>
+        <p>Scan random logos around the stadium to reveal objects and stand the change to win fantasic prizes.</p>
+        <button onclick="goToArPage();">Get Started</button>
+        <p id="error-text"></p>
+    </div>
+    
 
     <script src="index.js"></script>
 </body>
