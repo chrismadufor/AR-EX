@@ -1,45 +1,73 @@
-const stadiumCoords = {
-    long: 7.471104,
-    lat: 9.060352
-}
+let stadiumCoords;
+const stadiumCoord = {"lat":9.060352,"long":7.4678272}
 
-const matchDate = new Date()
-// const matchDate = new Date(2022,4,22)
-const experienceHr = 13
-const errorText = document.getElementById('error-text')
+const baseUrl = 'https://ar-be.herokuapp.com/'
+
+let userCoords;
+
+window.addEventListener('DOMContentLoaded', (event) => {
+    navigator.geolocation.getCurrentPosition(position => {
+        userCoords = position.coords
+        saveUserCoords()
+    })
+    getGame()
+});
+
+function saveUserCoords() {
+    if (userCoords) {
+        console.log('From function', userCoords)
+        const str = JSON.stringify({
+            lat: userCoords.latitude,
+            long: userCoords.longitude
+        })
+        console.log('str', str)
+       sessionStorage.setItem('arUserLocation', str)
+    }
+}
+let actualDay;
+async function getGame() {
+    const response = await fetch(`${baseUrl}api/games/today`)
+    const data = await response.json()
+    const gameDay = data.data.games[0].datetime
+    actualDay = new Date(gameDay)
+    stadiumCoords = {
+        lat: data.data.games[0].lat,
+        long: data.data.games[0].long
+    }
+    console.log(data)
+}
 
 let loading = true;
 let userInStadium = false
 
-// navigator.geolocation.getCurrentPosition(position => {
-//     userCoords = position.coords
-
-//     if (userCoords.longitude == stadiumCoords.long && userCoords.latitude == stadiumCoords.lat) userInStadium = true
-//     console.log('Is the user in the stadium?: ' + userInStadium)
-// })
-
 function goToArPage() {
+    const experienceMin = actualDay.getMinutes()
+    const experienceHr = actualDay.getHours()
+    const experienceDate = actualDay.getDate()
+    const experienceMonth = actualDay.getMonth()
+    const experienceTime = `${experienceHr}:${experienceMin}`
+    const errorText = document.getElementById('error-text')
     const today = new Date()
+    const userLocation = JSON.parse(sessionStorage.getItem('arUserLocation'))
+    console.log('From session storage', userLocation)
     navigator.geolocation.getCurrentPosition(position => {
         userCoords = position.coords
-        console.log(userCoords)
-        // matchDate.getHours()
-        
-    
-        if (userCoords.longitude == stadiumCoords.long && userCoords.latitude == stadiumCoords.lat) {
-            userInStadium = true
-            if (today.getHours() == experienceHr) {
-                if (userInStadium) {
+
+        if (today.getDate() == experienceDate && today.getMonth() == experienceMonth) {
+            if (userCoords.longitude == stadiumCoords.long && userCoords.latitude == stadiumCoords.lat) {
+                userInStadium = true
+                if (today.getHours() == experienceHr) {
                     window.location.assign('ar.html')
                 }else {
-                    errorText.innerText = 'You have to be in the stadium for the experience'
+                    errorText.innerText = `It is not yet time for the Experience!! The next experience is by ${experienceTime} `
                 }
-            }else {
-                errorText.innerText = 'It is not gameday!!'
+            }
+            else {
+                errorText.innerText = 'Yaay!! It is gameday but you have to be in the stadium for the experience'
             }
         }
         else {
-            errorText.innerText = 'You have to be in the stadium for the experience'
+            errorText.innerText = 'It is not gameday!!'
         }
     })
 }
