@@ -4,25 +4,33 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
     <title>Document</title>
   </head>
   <body>
-    <div class="location">
-      <h1>Your location is</h1>
-      <p>Long: <span id="long"></span></p>
-      <p>Lat: <span id="lat"></span></p>
+    <header>
+      <div class="logo"></div>
+    </header>
+    <div class="hero">
+      <h1>Go Sporting Lagos!</h1>
+      
     </div>
-    <a href="ar.html"><button>Go to experience!</button></a>
-
-    <script>
-      const long = document.getElementById('long')
-      const lat = document.getElementById('lat')
-      navigator.geolocation.getCurrentPosition(position => {
-        console.log(position)
-
-        long.innerText = position.coords.longitude
-        lat.innerText = position.coords.latitude
-      })
-    </script>
+    <div class="exp">
+      <h1>Scan images of sponsors around the stadium and stand a chance to win fantastic prizes!!</h1>
+      <div class="detail">
+        <i class="fas fa times"></i>
+        <p>You must be in the stadium to have this experience.</p>
+      </div>
+      <div class="detail">
+        <i class="fas fa times"></i>
+        <p>It is not not yet game day</p>
+      </div>
+      <a href="experience.html"><button>Let's Go!</button></a>
+    </div>
+    <div class="partners">
+      <h3>Sponspored by</h3>
+      <div class="partners-block">
+      </div>
+    </div>
   </body>
 </html>

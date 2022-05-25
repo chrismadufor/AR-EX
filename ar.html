@@ -5,7 +5,7 @@
     <script src="https://aframe.io/releases/1.2.0/aframe.min.js"></script>
     <!-- <script src="https://cdn.jsdelivr.net/gh/donmccurdy/aframe-extras@v6.1.1/dist/aframe-extras.min.js"></script> -->
     <script src="https://cdn.jsdelivr.net/gh/hiukim/mind-ar-js@1.1.4/dist/mindar-image-aframe.prod.js"></script>
-    <script src="index.js"></script>
+    <script src="ar.js"></script>
     <link rel="stylesheet" href="style.css">
   </head>
   <body>
@@ -42,7 +42,7 @@
         <a-gltf-model class="clickable" rotation="0 0 0 " position="0 -0.25 0" scale="0.002 0.002 0.002" src="#gift" animation-mixer>
       </a-entity>
       <a-entity mindar-image-target="targetIndex: 4">
-        <a-gltf-model class="clickable" rotation="0 0 0 " position="0 0 0" scale="0.8 0.8 0.8" src="#piggybank" animation-mixer>
+        <a-gltf-model id="piggy1" class="clickable" rotation="0 0 0 " position="0 0 0" scale="0.8 0.8 0.8" src="#piggybank" animation-mixer>
       </a-entity>
       <a-entity mindar-image-target="targetIndex: 5" id="piggyWrap" class="relative">
         <a-gltf-model id="piggy" class="clickable" rotation="0 0 0 " position="0 0 0" scale="1 1 1" src="#piggybank1" animation-mixer>
