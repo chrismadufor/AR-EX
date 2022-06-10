@@ -290,14 +290,13 @@ body#prize {
 }
 
 .footer {
-    position: absolute;
-    bottom: 0;
     width: 100%;
-    background-color: #0F2344;
-    color: white;
+    /* background-color: #0F2344; */
+    color: #0F2344;
     text-align: center;
     font-size: 14px;
-    padding: 5px 0;
+    margin-top: 30px;
+    padding: 10px 0;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -328,14 +327,5 @@ body#prize {
     }
     100% {
         transform: rotate(360deg);
-    }
-}
-
-@media (max-height: 700px) {
-    body#prize {
-        flex-direction: column;
-    }
-    .footer {
-        position: static;
     }
 }
