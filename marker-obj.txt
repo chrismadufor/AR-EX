@@ -1,0 +1,13 @@
+targetIndex
+id
+model-id
+hasPrice
+scale
+position
+
+****
+
+* Redo the target.mind file; add Paystack
+* Get new markers with improved DPI
+* LOCATION-BASED!!
+* Test price logic

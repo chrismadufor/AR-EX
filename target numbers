@@ -1,7 +1,7 @@
 This is a temporary file to track the target order in the targets.mind file.
 PS: A better approach will be to get a seperate target file for each image to avoid confusion. However, this is a test.
 
-1. Burger King without blue curve - burger
+<!-- 1. Burger King without blue curve - burger
 2. Burger King with blue curve - cheeseBurger
 3. Game time, yellow bg - mechanicalOwl
 4. Game time, blue bg - gift
@@ -10,4 +10,98 @@ PS: A better approach will be to get a seperate target file for each image to av
 7. Sporting Lagos square tiles bg - football
 8. Sporting Lagos white bg - coin
 9. Sporting Lagos banner - money
-10. This is Lagos - goldCoin
+10. This is Lagos - goldCoin -->
+
+1. Paystack blue
+2. Paystack white
+3. Piggyvest blue
+4. Piggyvest white
+5. Burgerking classic
+6. Burgerking new
+7. Sporting blue
+8. Sporting white
+9. Gametime blue
+10. Gametime yellow
+
+const markers = [
+    paystack-blue: {
+        targetIndex: 0,
+        id: 'paystack-blue',
+        model-id: 'gift',
+        hasPrice: 'boolean',
+        scale: '0.002',
+        position: '0'
+    },
+    paystack-white: {
+        targetIndex: 1,
+        id: 'paystack-white',
+        model-id: 'coin',
+        hasPrice: 'boolean',
+        scale: '0.02',
+        position: '0'
+    },
+    piggy-blue: {
+        targetIndex: 2,
+        id: 'piggy-blue',
+        model-id: 'piggybank',
+        hasPrice: 'boolean',
+        scale: '0.8',
+        position: '0'
+    },
+    piggy-white: {
+        targetIndex: 3,
+        id: 'piggy-white',
+        model-id: 'piggybank1',
+        hasPrice: 'boolean',
+        scale: '1',
+        position: '0'
+    },
+    burger-old: {
+        targetIndex: 4,
+        id: 'burger-old',
+        model-id: 'burger',
+        hasPrice: 'boolean',
+        scale: '0.3',
+        position: '0'
+    },
+    burger-new: {
+        targetIndex: 5,
+        id: 'burger-new',
+        model-id: 'cheeseburger',
+        hasPrice: 'boolean',
+        scale: '0.3',
+        position: '0'
+    },
+    sporting-blue: {
+        targetIndex: 6,
+        id: 'sporting-blue',
+        model-id: 'football1',
+        hasPrice: 'boolean',
+        scale: '0.005',
+        position: '0'
+    },
+    sporting-white: {
+        targetIndex: 7,
+        id: 'sporting-white',
+        model-id: 'football',
+        hasPrice: 'boolean',
+        scale: '0.005',
+        position: '0'
+    },
+    game-blue: {
+        targetIndex: 8,
+        id: 'game-blue',
+        model-id: 'money',
+        hasPrice: 'boolean',
+        scale: '0.05',
+        position: '0'
+    },
+    game-yellow: {
+        targetIndex: 9,
+        id: 'game-yellow',
+        model-id: 'goldCoin',
+        hasPrice: 'boolean',
+        scale: '0.5',
+        position: '0'
+    },
+]

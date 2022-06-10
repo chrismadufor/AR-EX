@@ -11,11 +11,21 @@ h1, h2, h3 {
     font-family: 'Bungee';
 }
 
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
 p {
     font-family: 'Balsamiq Sans';
 }
 
-.instructions {
+button {
+    border: none;
+    display: block;
+}
+
+.instructions, .prize-header {
     position: fixed;
     top: 0;
     right: 0;
@@ -25,28 +35,95 @@ p {
     font-size: 20px;
     text-transform: uppercase;
     text-align: center;
+    z-index: 5;
 }
 
-.instructions img {
+.instructions img, .prize-header img {
     width: 100%;
     max-height: 100px;
     display: block;
     object-fit: cover;
 }
 
-.claim-btn {
-    height: 50px;
+.feedback{
+    height: 100vh;
     width: 100%;
-    background-color: #0F2344;
-    color: white;
-    font-size: 20px;
     position: fixed;
     bottom: 0;
     left: 0;
-    border: none;
+    position: relative;
+    /* background-color: #707070; */
+    flex-direction: column;
+    z-index: 5;
+}
+
+.claim-btn {
+    width: 100%;
+    height: 60px;
+    background-color: #0F2344;
+    color: white;
+    font-size: 20px;
     letter-spacing: 3px;
     display: none;
+    position: absolute;
+    bottom: 0;
     z-index: 5;
+}
+
+.loader {
+    background-color: #0F2344;
+    position: absolute;
+    bottom: 0;
+    height: 80px;
+    width: 100%;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    display: none;
+    animation: fromBottom 0.5s linear forwards;
+}
+
+.loader p {
+    font-size: 16px;
+    color: white;
+    font-family: "Balsamiq Sans";
+}
+
+.no-prize {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    width: 100%;
+    margin: 0 auto;
+    height: 80px;
+    animation: fromBottom 0.5s linear forwards;
+    /* background-color: #fff; */
+    background-color: #E9923B;
+    color: white;
+    flex-direction: column;
+    position: absolute;
+    bottom: 0;
+    /* left: 50%;
+    transform: translate(-50%, -50%); */
+    /* border-radius: 5px; */
+    /* box-shadow: 2px 2px 5px rgb(94, 93, 93); */
+    font-size: 16px;
+    display: none;
+}
+
+@keyframes fromBottom {
+    from {
+        transform: translateY(100%);
+    }
+    to {
+        transform: translateY(0)
+    }
+}
+
+.no-prize p {
+    margin: 3px 0;
 }
 
 a-entity {
@@ -63,17 +140,19 @@ body#prize {
     display: flex;
     align-items: center;
     justify-content: center;
-    height: 100vh;
+    min-height: 100vh;
+    padding-top: 100px;
 }
 
 .prize-header {
     position: fixed;
     top: 0;
     width: 100%;
+
 }
 
 .page-title {
-    font-size: 24px;
+    font-size: 20px;
     text-align: center;
     margin-bottom: 20px;
     color: #0F2344;
@@ -103,7 +182,158 @@ body#prize {
 }
 
 #company-logo {
-    width: 80%;
+    display: block;
+    /* width: 100%; */
     max-width: 200px;
+    max-height: 70px;
     margin: 0 auto 20px;
+}
+
+#my-canvas {
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: 100vh;
+    z-index: -1;
+    opacity: 0.8;
+}
+
+.form {
+    width: 95%;
+    max-width: 350px;
+    margin: 20px auto 0;
+    padding: 20px 10px;
+    background-color: #fafafa;
+}
+
+.form input {
+    display: block;
+    width: 100%;
+    height: 40px;
+    padding-left: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #eee;
+    font-size: 14px;
+}
+
+.form input:focus {
+    outline: none;
+}
+
+.form button {
+    width: 100%;
+    height: 40px;
+    border-radius: none;
+    font-size: 16px;
+    text-transform: 
+    uppercase;
+}
+
+.form p {
+    text-align: center;
+    margin-bottom: 20px;
+    font-weight: light;
+    font-size: 16px;
+}
+
+#modal {
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    position: absolute;
+    top: 0;
+    display: none;
+}
+
+#modal-wrap {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #0F2344;
+    color: white;
+    text-align: center;
+    width: 95%;
+    border-radius: 5px;
+    padding: 20px;
+    margin: 0 auto;
+    max-width: 350px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+#modal-wrap h4 {
+    font-size: 20px;
+    margin-bottom: 10px;
+}
+
+#modal-wrap p {
+    margin: 5px 0;
+}
+
+.btns {
+    margin-top: 10px;
+}
+
+.btns button {
+    display: block;
+    height: 40px;
+    width: 200px;
+    font-size: 16px;
+    margin: 10px 0;
+    color: #fff;
+    background-color: #E9923B;
+}
+
+.footer {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    background-color: #0F2344;
+    color: white;
+    text-align: center;
+    font-size: 14px;
+    padding: 5px 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.wait {
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.6);
+    backdrop-filter: blur(5px);
+    position: absolute;
+    top: 0;
+    /* display: none; */
+    display: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: white;
+}
+
+@keyframes rotate {
+    0% {
+        transform: rotate(0deg);
+    }
+    50% {
+        transform: rotate(180deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+@media (max-height: 700px) {
+    body#prize {
+        flex-direction: column;
+    }
+    .footer {
+        position: static;
+    }
 }
