@@ -1,0 +1,243 @@
+/*
+Template 2061 red bokeh
+http://www.tooplate.com/view/2061-red-bokeh
+*/
+
+body {
+	margin: 0;
+	padding: 0;
+	color: #e0baba;
+	font-family: Tahoma, Geneva, sans-serif;
+	font-size: 12px;
+	line-height: 1.4em; 
+	background-color:rgb(18, 37, 70); 
+}
+
+h1, h2, h3, h4, h5, h6 {
+	color:#fff;
+	font-weight:400;
+	padding: 0;
+	margin: 0 0 10px 0;
+	font-family: Georgia, "Times New Roman", Times, serif;
+}
+
+h1 { font-size:34px; margin-bottom: 25px; line-height: 38px  }
+h2 { font-size:26px; margin-bottom: 25px; line-height: 28px; }
+h3 { font-size:20px; line-height: 24px }
+h4 { font-size:18px }
+h5 { font-size:16px }
+h6 { font-size:12px }
+
+.left { float:left }
+.right { float:right }
+.clear { clear: both }
+.h10 { height: 10px }
+.h20 { height: 20px }
+.h30 { height: 30px }
+.h60 { height: 60px }
+
+img { margin: 0; padding: 0; border: 0;}
+.img_border { border: 1px solid #ae1e1e; background: #820606; padding: 6px }
+.img_border_s { padding: 3px }
+.img_border_b { padding: 6px }
+.img_nom { display: block; margin-bottom: 15px }
+.img_fl { float: left; display: block; margin: 1px 20px 8px 0 }
+.img_fr { float: right; margin: 1px 0 8px 20px }
+.img_size{width:50px; height:50px;}
+
+
+p { margin: 0 0 10px 0; padding: 0 }
+em { color: #fff }
+hr { clear: both; margin-bottom: 40px; padding-top: 20px; border: none; background: url(images/tooplate_hr_divider.png) repeat-x bottom }
+
+a:link, a:visited { color:#e38d00; text-decoration: none}
+a:hover { text-decoration:underline }
+a:hover,a:active { outline:none }
+
+a.more, form .more { display: block; margin-top: 10px; color: #d51919; width: 80px; height: 30px; line-height: 30px; text-align: center; background: url(images/tooplate_button_small.png) }
+form .more { border: none; cursor: pointer }
+
+a.more_b { display: block; margin-top: 15px; color: #d51919; text-shadow: 1px 1px 1px #000; font-size: 16px; width: 160px; height: 52px; line-height: 52px; text-align: center; background: url(images/tooplate_button_large.png); border: none }
+	
+
+a.button, a.more { text-decoration: none }
+
+ul.nobullet { margin: 0; padding: 0; list-style: none }
+ul.nobullet li { margin: 0; padding: 0 }
+
+ul.list_bullet { margin: 10px 0 10px 15px; padding: 0; list-style: none }
+ul.list_bullet li { color:#240000; margin: 0 0 7px 0; padding: 0 0 0 20px; background: url(images/tooplate_bullet.png) no-repeat scroll 0 5px  }
+ul.list_bullet li a { color: #240000; font-weight: normal; text-decoration: none }
+ul.list_bullet li a:hover { color: #240000 }
+
+#tooplate_wrapper {
+	width: 960px;
+	margin: 0 auto;
+	padding: 0 10px;
+	background: url(images/tooplate_body.jpg) no-repeat top center
+}
+#tooplate_header {
+	height: 140px;
+}
+#tooplate_menu {
+	padding: 0 30px;
+	height: 52px;
+	margin-bottom: 30px;
+	background: url(images/tooplate_menu_bar.png) no-repeat
+}
+#tooplate_slider_wrapper {
+	position: relative;
+	padding: 0 30px;
+	margin-bottom: 30px;
+}
+#tooplate_middle {
+	height: 71px;
+	padding: 30px;
+	margin-bottom: 100px;
+	background:url(images/tooplate_middle.png) no-repeat
+}
+#tooplate_main {
+	padding: 0 30px 80px;
+}
+#tooplate_content {
+	width: 590px;
+}
+#tooplate_sidebar {
+	width: 280px;
+}
+#tooplate_bottom {
+	padding: 30px;
+	border-top: 1px solid #b01d1e;
+	background: #820606
+}
+#tooplate_footer {
+	padding: 30px 30px 10px 30px;
+	background: url(images/tooplate_footer.jpg) top center no-repeat 
+}
+
+.col { float: left; margin: 0 30px 30px 0 }
+.col_2 { width: 435px }
+.col_3 { width: 280px }
+.col_32 { width: 590px }
+.col_4 { width: 202px }
+.col_43 { width: 607px }
+.col_5 { width: 156px }
+
+
+#tooplate_content .col { float: left; margin: 0 30px 30px 0 }
+#tooplate_content .col_2 { width: 280px }
+#tooplate_content .col_3 { width: 176px }
+#tooplate_content .col_32 { width: 590px }
+#tooplate_content .no_mr { margin-right: 0 }
+
+/* header */
+
+#site_title { padding-top: 80px; }
+#site_title a { display: block; width: 300px; height: 50px; margin: 0 auto; background: url(images/tooplate_logo.png) no-repeat bottom center; text-indent: -10000px }
+
+/* slider */
+#tooplate_slider_content {
+	float: left;
+	padding: 30px 0;
+	width: 360px;
+}
+#tooplate_slider_content p {
+	color: #fff;
+	font-size: 38px;
+	line-height: 40px;
+	margin-bottom: 50px;
+	font-family: Georgia, "Times New Roman", Times, serif;
+}
+#tooplate_slider {
+	float: right;
+	widows: 460px;
+	height: 340px;
+	padding-bottom: 21px;
+	background: url(images/tooplate_slider_frame.png) no-repeat bottom center;
+}
+
+/* middle */
+#tooplate_middle { color: #d93131 }
+#tooplate_middle h2 { margin-bottom: 10px; font-size: 18px; color: #fff }
+#tooplate_middle h2 a { color: #fff }
+
+/* main */
+#tooplate_main {}
+
+/* content */
+#tooplate_content {}
+
+.post { clear: both; margin: 0 0 40px 0; padding: 0 0 40px 0; background: url(images/tooplate_hr_divider.png) repeat-x bottom }
+.post h2 { margin-bottom: 30px }
+.post p { margin-bottom: 15px }
+.comment_list { margin: 0; padding: 0; list-style: none }
+.comment_list .comment_box { padding: 20px; border-bottom: 1px solid #820606 }
+.comment_list li { margin-bottom: 20px }
+.comment_list li ul { list-style: none; background: none }
+.comment_list li ul li { }
+.comment_list li ul li .comment_box { background: #820606 }
+.comment_content { float: right; width: 430px }
+.comment_list li ul li.depth_2 .comment_content  { width: 390px }
+.comment_list li ul li.depth_3 .comment_box { background: #720202 }
+.comment_list li ul li.depth_3 .comment_content  { width: 350px }
+
+
+#comment_form { margin-top: 40px }
+#comment_form form label { display: block }
+#comment_form form .input_field { display: block; width: 192px; padding: 5px; margin-bottom: 20px; color: #666;  background: #fff; border: 1px solid #630000; }
+#comment_form form textarea { width: 425px; height: 130px; padding: 5px; margin-bottom: 10px; color: #666; 5px; background: #fff; border: 1px solid #630000 }
+
+#gallery {
+}
+#gallery hr { margin: 0 0 15px 0; padding: 20px 0 0 0 }
+#gallery .more { display: block; float: left; margin-right: 10px }
+#gallery li { display: block; float: left; width: 202px; margin: 0 30px 30px 0; }
+#gallery li.no_mr { margin-right: 0 }
+
+#contact_form { padding: 0; margin-bottom: 40px; width: 435px; }
+#contact_form form { margin: 0px; padding: 0px; }
+#contact_form form .input_field { width: 192px; padding: 5px; margin-bottom: 20px; color: #666;  background: #fff; border: 1px solid #630000; }
+#contact_form form label { display: block }
+#contact_form form textarea { width: 425px; height: 130px; padding: 5px; margin-bottom: 10px; color: #666; 5px; background: #fff; border: 1px solid #630000 }
+
+
+/* sidebar */
+#tooplate_sidebar {}
+
+.sidebar_section {
+	padding: 10px;
+	width: 200px;
+	margin-bottom: 40px;
+	background: url(images/tooplate_sidebar_sc.png) bottom no-repeat
+}
+
+ul.sidebar_link li {
+	padding: 10px 0;
+	border-bottom: 1px solid #820606
+}
+
+ul.rc_comment li span { color: #fff }
+
+/* bottom */
+
+#tooplate_bottom {
+	display:flex;
+	/* align-items: center; */
+	justify-content: center;
+}
+#tooplate_bottom li {
+	padding: 5px 0;
+	border-bottom: 1px solid #5f0000
+}
+
+#tooplate_footer {}
+
+.pagging { margin: 0 0 20px; padding: 0 }
+.pagging ul { margin: 0; padding: 0; list-style: none }
+.pagging ul li { margin: 0; padding: 0; display: inline }
+.pagging ul li a { float: left; display: block; color: #fff; text-decoration: none; margin-right: 5px; padding: 5px 10px; background: #820606; border: 1px solid #ad1c1c}
+.pagging ul li a:hover { background: #240000; }
+
+
+.no_mr { margin-right: 0 }
+.no_mb { margin-bottom: 0 }
