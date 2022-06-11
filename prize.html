@@ -4,20 +4,50 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://cdn.jsdelivr.net/npm/confetti-js@0.0.18/dist/index.min.js"></script>
     <link rel="stylesheet" href="style.css" />
     <title>Congratulations | Sporting Lagos AR Gameday Experience</title>
   </head>
   <body id="prize">
+    <canvas id="my-canvas"></canvas>
     <div class="prize-header">
       <img src="img/spbanner.png" alt="" />
     </div>
     <div class="prize-body">
-      <img id="company-logo" src="img/piggyvest.png" alt="" />
+      <img id="company-logo" src="" alt="" />
       <h1 class="page-title">Congratulations!! 🎊</h1>
       <p id="prize-message" class="prize-message">
-        You just won NGN10,000 into your Piggyvest flex account!!
+        You just won <span id="prize-message-span"></span>
       </p>
-      <button>Redeem</button>
+
+      <!-- form to collect user info -->
+      <div class="form">
+        <p>Enter your details below to redeem your prize</p>
+        <input id="first-name" type="text" placeholder="First Name">
+        <input id="last-name" type="text" placeholder="Last Name">
+        <input id="email" type="text" placeholder="Email">
+        <button id="redeem-btn">Redeem</button>
+      </div>
+    <p class="footer"><span>⚡⚡</span> Powered By Alvative</p>
     </div>
+
+    <div id="modal">
+      <div id="modal-wrap">
+        <h4>Great job <span id="name-tag"></span>!</h4>
+        <p>Your prize has been redeemed!</p>
+        <p>We will be in touch with you shortly.</p>
+        <div class="btns">
+          <a href="ar.html" onclick="clearSlarge()">
+            <button>Back to Experience</button>
+          </a>
+          <a href="index.html" onclick="clearSlarge()">
+            <button>Back Home</button>
+          </a>
+        </div>
+      </div>
+    </div>
+
+
+    <script src="prize.js"></script>
   </body>
 </html>
