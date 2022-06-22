@@ -65,11 +65,13 @@ function addEvents() {
                 console.log('target found')
                 if (markersObj[index].hasPrize){
                     loader.style.display = 'flex'
-                    claimPrice(markersObj[index].id)
+                    claimPrice(markersObj[index].id, index)
                 }
                 else {
+                    const facts = markersObj[index].facts
                     noPrize.style.display = 'flex'
-                    setTimeout(() => noPrize.style.display = 'none', 3000)
+                    noPrize.innerHTML = facts[Math.floor(Math.random()*facts.length)]
+                    setTimeout(() => noPrize.style.display = 'none', 5000)
                 }
             }
             console.log('After restriction', requestCount)
@@ -79,15 +81,17 @@ function addEvents() {
             console.log('target lost')
             const btn = document.querySelector('.claim-btn')
             const noPrize = document.querySelector(".no-prize")
+            const canvas = document.getElementById('ar-canvas')
             loader.style.display = 'none'
             btn.style.display = 'none'
+            canvas.style.display = 'none'
             noPrize.style.display = 'none'
             if (sessionStorage.getItem('slarge') !== null) sessionStorage.removeItem('slarge')
         })
     })
 }
 
-async function claimPrice(markerId) {
+async function claimPrice(markerId, index) {
     const btn = document.querySelector('.claim-btn')
     const canvas = document.getElementById('ar-canvas')
     const noPrize = document.querySelector(".no-prize")
@@ -105,10 +109,12 @@ async function claimPrice(markerId) {
         }
         else {
             loader.style.display = 'none'
-            noPrize.style.display = 'flex'
             btn.style.display = 'none'
+            const facts = markersObj[index].facts
+            noPrize.style.display = 'flex'
+            noPrize.innerHTML = facts[Math.floor(Math.random()*facts.length)]
             if (sessionStorage.getItem('slarge') !== null) sessionStorage.removeItem('slarge')
-            setTimeout(() => noPrize.style.display = 'none', 3000)
+            setTimeout(() => noPrize.style.display = 'none', 5000)
         }
     }, 2000)
     

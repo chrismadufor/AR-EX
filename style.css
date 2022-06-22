@@ -334,3 +334,67 @@ body#prize {
         transform: rotate(360deg);
     }
 }
+
+/* LANDING PAGE */
+
+.d-flex {
+    display: flex;
+    align-items: center;
+    padding: 0 20px;
+}
+
+.hero {
+    height: 100vh;
+    max-height: 450px;
+    background-image:linear-gradient(to right, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.13)), url(img/spplay.jpg);
+    background-size: cover;
+    color: white;
+}
+
+.banner {
+    height: 100px;
+}
+
+.banner img {
+    width: 100%;
+    height: 100px;
+    object-fit: cover;
+}
+
+.exp {
+    height: calc(100vh - 130px);
+    /* max-height: 450px; */
+    background-image:linear-gradient(to right, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.13)), url(img/spfans.jpg);
+    background-size: cover;
+    color: white;
+}
+
+.d-flex .text {
+    width: 90%;
+}
+
+.d-flex .text button {
+    padding: 10px 40px;
+    background-color: #E9923B;
+    color: white;
+    font-size: 16px;
+    margin-top: 20px;
+}
+
+.d-flex .text p {
+    line-height: 2;
+}
+
+.land-footer {
+    background-color: black;
+}
+
+.copy {
+    height: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 14px;
+    color: white;
+    background-color: #0F2344;
+}
