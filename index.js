@@ -18,12 +18,8 @@ window.addEventListener('DOMContentLoaded', (event) => {
 function saveUserCoords() {
     if (userCoords) {
         console.log('From function', userCoords)
-        const str = JSON.stringify({
-            lat: userCoords.latitude,
-            long: userCoords.longitude
-        })
-        console.log('str', str)
-       sessionStorage.setItem('arUserLocation', str)
+       sessionStorage.setItem('arUserLong', userCoords.longitude)
+       sessionStorage.setItem('arUserLat', userCoords.latitude)
     }
 }
 const wait = document.querySelector('.wait')
@@ -66,11 +62,12 @@ function goToArPage() {
         const experienceTime = `${experienceHr}:${experienceMin}`
         const errorText = document.getElementById('error-text')
         const today = new Date()
-        const userLocation = JSON.parse(sessionStorage.getItem('arUserLocation'))
+        const userLong = sessionStorage.getItem('arUserLong')
+        const userLat = sessionStorage.getItem('arUserLat')
 
         
         if (today.getDate() == experienceDate && today.getMonth() == experienceMonth) {
-            if (userLocation.long == stadiumCoords.long && userLocation.lat == stadiumCoords.lat) {
+            if (userLong == stadiumCoords.long && userLat == stadiumCoords.lat) {
                 userInStadium = true
                 if (today.getHours() == experienceHr) {
                     sessionStorage.setItem('slarge-ar', true)
@@ -99,7 +96,7 @@ function goToArPage() {
         }
     }
     catch(err) {
-        console.log(err)
+        alert(err)
         errorText.innerText = 'Something went wrong. Refresh the page'
         setTimeout(() => errorText.innerText = '', 4000)
     }
