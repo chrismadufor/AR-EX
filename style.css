@@ -55,7 +55,7 @@ button {
     /* background-color: #707070; */
     flex-direction: column;
     z-index: 5;
-    padding-bottom: 70px;
+    /* padding-bottom: 70px; */
 }
 
 .claim-btn {
@@ -191,13 +191,18 @@ body#prize {
     margin: 0 auto 20px;
 }
 
-#my-canvas {
+#my-canvas, #ar-canvas {
     position: absolute;
     top: 0;
     width: 100%;
     height: 100vh;
     z-index: -1;
     opacity: 0.8;
+}
+
+#ar-canvas {
+    display: none;
+    z-index: 1;
 }
 
 .form {

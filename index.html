@@ -7,62 +7,106 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
     <title>Sporting Lagos</title>
+
+    <link rel="stylesheet" href="./css/orman.css" type="text/css" media="screen" />
+    <link rel="stylesheet" href="./css/nivo-slider.css" type="text/css" media="screen" />
+
+
     <script>
-        if(sessionStorage.getItem('slarge')) sessionStorage.removeItem('slarge')
-      </script>
+        if (sessionStorage.getItem('slarge')) sessionStorage.removeItem('slarge')
+    </script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
 
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
 
     <link rel="stylesheet" href="style.css" />
 </head>
 
 <body style="background-color: rgb(18, 37, 70);" class="text-center">
-    <div class="conatiner pt-5">
-        <div class="row justify-content-evenly m-auto">
+    <div class="conatiner">
+        <div class="row d-flex justify-content-center m-auto">
             <h1 class="text-center" style="color: white;">This is Sporting</h1>
             <div class=" col-sm-5 text-center "><img src="./img/sporting logo" alt="" style="border-radius: 50%;">
             </div>
             <h1 class="text-center" style="color: white;">This is lagos</h1>
-            <br><br><br><br>
-            <div class="col-sm-5" style="padding-bottom: 50px;">
-                <div id="carouselExampleFade " class="carousel slide carousel-fade " data-bs-ride="carousel ">
-                    <div class="carousel-inner ">
-                        <div class="carousel-item active ">
-                            <img src="./img/game day one.jpeg" class="d-block w-100 " alt="... ">
-                        </div>
-                        <div class="carousel-item ">
-                            <img src="./resources/piggvest-logo.png" class="d-block w-100 " alt="... ">
-                        </div>
-                        <div class="carousel-item ">
-                            <img src="../../Pictures/Screenshot_109.png " class="d-block w-100 " alt="... ">
-                        </div>
+        </div>
+        <div class="d-flex justify-content-center">
+            <div id="tooplate_slider" class="slider-wrapper theme-orman">
+                <div id="slider" class="nivoSlider">
+                    <a rel="nofollow" href="" target="_blank"><img src="img/game day one.jpeg" alt="" /></a>
+                    <img src="img/game day 2.jpg" alt="" />
+                    <img src="img/game day card 3.jpg" alt=""" />
                     </div>
-                    <button class="carousel-control-prev " type="button " data-bs-target="#carouselExampleFade " data-bs-slide="prev ">
-                            <span class="carousel-control-prev-icon " aria-hidden="true "></span>
-                            <span class="visually-hidden ">Previous</span>
-                        </button>
-                    <button class="carousel-control-next " type="button " data-bs-target="#carouselExampleFade " data-bs-slide="next ">
-                            <span class="carousel-control-next-icon " aria-hidden="true "></span>
-                            <span class="visually-hidden ">Next</span>
-                        </button>
+                </div> 
+                <script type=" text/javascript" src="js/jquery-1.6.1.min.js"></script>
+                    <script type="text/javascript" src="js/jquery.nivo.slider.pack.js"></script>
+                    <script type="text/javascript">
+                        $(window).load(function () {
+                            $('#slider').nivoSlider({
+                                effect: 'boxRainGrow',
+                                controlNav: false,
+                                directionNavHide: false
+                            });
+                        });
+                    </script>
+                    <div class="clear"></div>
+                </div> <!-- END of slider -->
+            </div>
+            <div class="mt-5 card text-center m-auto" style="background-color: rgb(225, 181, 36);">
+
+                <div class="d-flex justify-content-center my-3">
+                    <img src="img/tooplate_image_01.png" alt="image" class="img_fl" />
+                </div>
+
+                <div class="card-body" style="color: rgb(18, 37, 70); padding-top: 30px; padding-bottom: 30px;">
+                    <h5 class="card-title ">Experience a Matchday Like Never Before!!!</h5>
+                    <p class="card-text ">Get the chance to win fantastice prizes!!</p>
+                    <a href="experience.html" class="btn"
+                        style="background-color: rgb(18, 37, 70); color: white;">Experience</a>
                 </div>
             </div>
-        </div>
-        <div class="card text-center m-auto" style="background-color: white;">
-            <div class="card-body" style="color: rgb(18, 37, 70); padding-top: 30px; padding-bottom: 30px;">
-                <h5 class="card-title ">Experience a Matchday Like Never Before!!!</h5>
-                <p class="card-text ">Get the chance to win fantastice prizes!!</p>
-                <a href="experience.html" class="btn" style="background-color: rgb(18, 37, 70); color: white;">Experience</a>
+            <div class="col-12" style="color: white; padding-bottom: 0;">
+                <h6 class="text-center">Powered by Alvative</h6>
+                <div class="d-flex justify-content-evenly">
+                    <div style="text-align: center">
+                        <h3>Support</h3>
+                        <ul style="list-style: none;">
+                            <li><a style="text-decoration: none" href="#">Paystack</a></li>
+                            <li><a style="text-decoration: none" href="#">Piggy Vest</a></li>
+                            <li><a style="text-decoration: none" href="#">Paystack</a></li>
+                        </ul>
+                    </div>
+                    <div>
+                        <h3>About</h3>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec ante nibh, sagittis ut
+                            lobortis a, posuere vel sem. Vivamus ac diam nisi. </p>
+                        <input type="button" value="Learn More">
+                    </div>
+
+                    <div class="clear"></div>
+                </div>
+                <div>
+                    <div class="">
+                        <a href="#"><img src="./img/twitter2.png" alt="Twitter" /></a>
+                        <a href="#"><img src="./img/youtube.png" alt="Youtube" /></a>
+                        <a href="#"><img src="./img/facebook.png" alt="Facebook" /></a>
+                    </div>
+
+                    <div class="col_32 left">
+                        Copyright © 2022 Alvative
+                    </div>
+                    <div class="clear"></div>
+                </div>
+
+                <!-- test end  -->
             </div>
         </div>
-        <div class="col-12" style="color: white; padding-bottom: 0;">
-            <h6 class="text-center">Sponsored by Alvative</h6>
-        </div>
+
     </div>
-
-
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js " integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2 " crossorigin="anonymous "></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js "
+            integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2 "
+            crossorigin="anonymous "></script>
 </body>
 
 </html>

@@ -1,7 +1,9 @@
 // import baseUrl from 'constants'
 const baseUrl = 'https://ar-be.herokuapp.com/'
 // const gameId = "421bf3f8-af4c-4f4d-867b-e0c855dd47a0"
+
 let markersObj;
+
 if (sessionStorage.getItem('slarge') !== null) sessionStorage.removeItem('slarge')
 const gameId = sessionStorage.getItem('slarge-id')
 getMarkers()
@@ -61,7 +63,6 @@ function addEvents() {
             requestCount++
             if(requestCount <=1) {
                 console.log('target found')
-                console.log(requestCount)
                 if (markersObj[index].hasPrize){
                     loader.style.display = 'flex'
                     claimPrice(markersObj[index].id)
@@ -88,6 +89,7 @@ function addEvents() {
 
 async function claimPrice(markerId) {
     const btn = document.querySelector('.claim-btn')
+    const canvas = document.getElementById('ar-canvas')
     const noPrize = document.querySelector(".no-prize")
     const loader = document.querySelector(".loader")
     const response = await fetch(`${baseUrl}api/games/${gameId}/markers/${markerId}/attempt_claim`)
@@ -96,6 +98,7 @@ async function claimPrice(markerId) {
     setTimeout(() => {
         if (data.status == 'success') {
             loader.style.display = 'none'
+            canvas.style.display = 'block'
             btn.style.display = 'block'
             noPrize.style.display = 'none'
             btn.addEventListener('click', () => goToPrizePage(data))
@@ -121,7 +124,6 @@ function goToPrizePage(data) {
         company,
         id
     }
-
     console.log('obj', obj)
     localStorage.setItem('slarge', JSON.stringify(obj))
     wait.style.display = 'flex'

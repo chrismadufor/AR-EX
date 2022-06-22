@@ -8,11 +8,13 @@
     <script src="https://aframe.io/releases/1.3.0/aframe.min.js"></script>
     <!-- <script src="https://cdn.jsdelivr.net/gh/donmccurdy/aframe-extras@v6.1.1/dist/aframe-extras.min.js"></script> -->
     <script src="https://cdn.jsdelivr.net/gh/hiukim/mind-ar-js@1.1.4/dist/mindar-image-aframe.prod.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/confetti-js@0.0.18/dist/index.min.js"></script>
     <script src="ar.js"></script>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
     <link rel="stylesheet" href="style.css">
   </head>
   <body>
+    <canvas id="ar-canvas"></canvas>
     <div class="centered instructions">
         <img src="img/spbanner.png" alt="" />
     </div>
@@ -49,5 +51,18 @@
 
       <a-camera position="0 0 0" look-controls="enabled: false" cursor="fuse: false; rayOrigin: mouse;" raycaster="far: ${customFields.libVersion}; objects: .clickable"></a-camera>
     </a-scene>
+
+    <script>
+      // The canvas element was not found on the js file so I had to move it here
+      canvas = document.getElementById('ar-canvas')
+      let confettiSettings = { 
+          target: 'ar-canvas',
+          max: 100,
+          rotate: true,
+          clock: 20
+      };
+      let confetti = new ConfettiGenerator(confettiSettings);
+        confetti.render();
+    </script>
   </body>
 </html>
