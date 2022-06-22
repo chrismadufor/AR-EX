@@ -71,7 +71,7 @@ function addEvents() {
                     const facts = markersObj[index].facts
                     noPrize.style.display = 'flex'
                     noPrize.innerHTML = facts[Math.floor(Math.random()*facts.length)]
-                    setTimeout(() => noPrize.style.display = 'none', 5000)
+                    setTimeout(() => noPrize.style.display = 'none', 8000)
                 }
             }
             console.log('After restriction', requestCount)
@@ -114,7 +114,7 @@ async function claimPrice(markerId, index) {
             noPrize.style.display = 'flex'
             noPrize.innerHTML = facts[Math.floor(Math.random()*facts.length)]
             if (sessionStorage.getItem('slarge') !== null) sessionStorage.removeItem('slarge')
-            setTimeout(() => noPrize.style.display = 'none', 5000)
+            setTimeout(() => noPrize.style.display = 'none', 8000)
         }
     }, 2000)
     

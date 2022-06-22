@@ -37,7 +37,7 @@ async function getGame() {
     console.log(data)
     setTimeout(() => {
         wait.style.display = 'none'
-        main.style.display = 'flex'
+        // main.style.display = 'flex'
     }, 2000)
     const gameDay = data.data.game.datetime
     actualDay = new Date(gameDay)
@@ -90,7 +90,7 @@ function goToArPage() {
                     errorText.innerText = ''
                     sessionStorage.setItem('slarge-ar', true)
                     window.location.assign('ar.html')
-                }, 3000)
+                }, 4000)
             }
         }
         else {
