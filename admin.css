@@ -1,0 +1,24 @@
+@import url('https://fonts.googleapis.com/css2?family=Balsamiq+Sans&family=Bowlby+One+SC&family=Bungee&family=Monoton&display=swap');
+
+
+body {
+    background-color: rgb(3, 3, 58);
+    background-image: linear-gradient(rgb(3, 3, 58, 0.8), rgb(3, 3, 58, 0.4), rgb(3, 3, 58, 0.8)), url(img/ar-bg.jpg);
+    background-position: center;
+    background-size: cover;
+    font-family: 'Balsamiq Sans';
+}
+
+.banner {
+    height: 100px;
+}
+
+.banner img {
+    width: 100%;
+    height: 100px;
+    object-fit: cover;
+}
+
+.balsamiq-font{
+    font-family: 'Balsamiq Sans';
+}

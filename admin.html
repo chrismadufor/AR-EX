@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- CSS only -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor"
+      crossorigin="anonymous"
+    />
+
+
+    <link rel="stylesheet" href="./admin.css"/>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
+
+
+    <!-- JavaScript Bundle with Popper -->
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2"
+      crossorigin="anonymous"
+    ></script>
+
+    <title>Admin</title>
+  </head>
+
+  <body>
+    <div class="banner">
+        <img src="./img/spbanner.png" alt="">
+    </div>
+    <h1 style = "text-align:center; color:white">ADMIN</h1>
+
+    <div>
+      <div class="dropdown m-5 d-grid">
+        <button
+          class="btn btn-secondary rounded-pill dropdown-toggle"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#games"
+          aria-expanded="false"
+            aria-controls="games"
+        >
+          GAMES
+        </button>
+
+        <div class="list-group collapse" id="games" aria-labelledby="dropdownMenuButton1">
+            <a href="#" class="list-group-item list-group-item-action rounded-pill">Create a new game</a>
+            <a href="#" class="list-group-item list-group-item-action rounded-pill">List all games</a>
+            <a href="#" class="list-group-item list-group-item-action rounded-pill">Update a game</a>
+            <a href="#" class="list-group-item list-group-item-action rounded-pill">Delete a game</a>
+          </div>
+
+      </div>
+
+      <div class="dropdown m-5 d-grid">
+        <button
+          class="btn btn-secondary rounded-pill dropdown-toggle"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#markers"
+          aria-expanded="false"
+            aria-controls="markers"
+        >
+          MARKERS
+        </button>
+
+        <div class="list-group collapse" id="markers" aria-labelledby="dropdownMenuButton1">
+            <a href="#" class="list-group-item list-group-item-action rounded-pill">Create a new marker</a>
+            <a href="#" class="list-group-item list-group-item-action rounded-pill">List all markers</a>
+            <a href="#" class="list-group-item list-group-item-action rounded-pill">Update a marker</a>
+            <a href="#" class="list-group-item list-group-item-action rounded-pill">Delete a marker</a>
+          </div>
+
+      </div>
+
+      <div class="dropdown m-5 d-grid">
+        <button
+          class="btn btn-secondary rounded-pill dropdown-toggle"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#prices"
+          aria-expanded="false"
+            aria-controls="prices"
+        >
+          PRICES
+        </button>
+
+        <div class="list-group collapse" id="prices" aria-labelledby="dropdownMenuButton1">
+            <a href="#" class="list-group-item list-group-item-action rounded-pill">Create a new price</a>
+            <a href="#" class="list-group-item list-group-item-action rounded-pill">List all prices</a>
+            <a href="#" class="list-group-item list-group-item-action rounded-pill">Update a price</a>
+            <a href="#" class="list-group-item list-group-item-action rounded-pill">Delete a price</a>
+          </div>
+
+      </div>
+
+      <div class="dropdown m-5 d-grid">
+        <button
+          class="btn btn-secondary rounded-pill dropdown-toggle"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#fixtures"
+          aria-expanded="false"
+            aria-controls="fixtures"
+        >
+          FIXTURES
+        </button>
+
+        <div class="list-group collapse" id="fixtures" aria-labelledby="dropdownMenuButton1">
+            <a href="#" class="list-group-item list-group-item-action rounded-pill">Create a new fixture</a>
+            <a href="#" class="list-group-item list-group-item-action rounded-pill">List all fixtures</a>
+            <a href="#" class="list-group-item list-group-item-action rounded-pill">Update a fixture</a>
+            <a href="#" class="list-group-item list-group-item-action rounded-pill">Delete a fixture</a>
+          </div>
+
+      </div>
+
+    </div>
+  </body>
+</html>
