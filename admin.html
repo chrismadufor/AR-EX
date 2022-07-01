@@ -13,11 +13,16 @@
       crossorigin="anonymous"
     />
 
+    <!-- Font awesome -->
+    <link rel="stylesheet" href="path/to/font-awesome/css/font-awesome.min.css">
 
-    <link rel="stylesheet" href="./admin.css"/>
 
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
+    <link rel="stylesheet" href="./admin.css" />
 
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
+    />
 
     <!-- JavaScript Bundle with Popper -->
     <script
@@ -31,95 +36,55 @@
 
   <body>
     <div class="banner">
-        <img src="./img/spbanner.png" alt="">
+      <img src="./img/spbanner.png" alt="" />
     </div>
-    <h1 style = "text-align:center; color:white">ADMIN</h1>
+    <h1 class="my-3" style="text-align: center; color: white">ADMIN</h1>
 
-    <div>
-      <div class="dropdown m-5 d-grid">
-        <button
-          class="btn btn-secondary rounded-pill dropdown-toggle"
-          type="button"
-          data-bs-toggle="collapse"
-          data-bs-target="#games"
-          aria-expanded="false"
-            aria-controls="games"
-        >
-          GAMES
-        </button>
+    <div class="row justify-content-evenly my-5">
 
-        <div class="list-group collapse" id="games" aria-labelledby="dropdownMenuButton1">
-            <a href="#" class="list-group-item list-group-item-action rounded-pill">Create a new game</a>
-            <a href="#" class="list-group-item list-group-item-action rounded-pill">List all games</a>
-            <a href="#" class="list-group-item list-group-item-action rounded-pill">Update a game</a>
-            <a href="#" class="list-group-item list-group-item-action rounded-pill">Delete a game</a>
-          </div>
-
+      <!-- GAMES CARD -->
+        <div class="col-4 card" style="text-align: center; background-color: rgb(225, 181, 36);">
+          <a href="admin_games.html" style="text-decoration:none; color: black">
+            <i class="fa-solid fa-gamepad fa-4x"></i>
+            <div class="card-body">
+              <h3 style="font-size:15px; font-weight:bold">GAMES</h3>
+            </div>
+          </a>
       </div>
-
-      <div class="dropdown m-5 d-grid">
-        <button
-          class="btn btn-secondary rounded-pill dropdown-toggle"
-          type="button"
-          data-bs-toggle="collapse"
-          data-bs-target="#markers"
-          aria-expanded="false"
-            aria-controls="markers"
-        >
-          MARKERS
-        </button>
-
-        <div class="list-group collapse" id="markers" aria-labelledby="dropdownMenuButton1">
-            <a href="#" class="list-group-item list-group-item-action rounded-pill">Create a new marker</a>
-            <a href="#" class="list-group-item list-group-item-action rounded-pill">List all markers</a>
-            <a href="#" class="list-group-item list-group-item-action rounded-pill">Update a marker</a>
-            <a href="#" class="list-group-item list-group-item-action rounded-pill">Delete a marker</a>
-          </div>
-
+    
+      <!-- card two -->
+      <div class="col-4 card" style="text-align: center; background-color: rgb(225, 181, 36);">
+        <a href="admin_prices.html" style="text-decoration:none; color: black">
+        <i class="fa-solid fa-gift fa-4x"></i>
+        <div class="card-body">
+          <h3 style="font-size:15px; font-weight:bold">PRICES</h3>
+        </div>
       </div>
-
-      <div class="dropdown m-5 d-grid">
-        <button
-          class="btn btn-secondary rounded-pill dropdown-toggle"
-          type="button"
-          data-bs-toggle="collapse"
-          data-bs-target="#prices"
-          aria-expanded="false"
-            aria-controls="prices"
-        >
-          PRICES
-        </button>
-
-        <div class="list-group collapse" id="prices" aria-labelledby="dropdownMenuButton1">
-            <a href="#" class="list-group-item list-group-item-action rounded-pill">Create a new price</a>
-            <a href="#" class="list-group-item list-group-item-action rounded-pill">List all prices</a>
-            <a href="#" class="list-group-item list-group-item-action rounded-pill">Update a price</a>
-            <a href="#" class="list-group-item list-group-item-action rounded-pill">Delete a price</a>
-          </div>
-
-      </div>
-
-      <div class="dropdown m-5 d-grid">
-        <button
-          class="btn btn-secondary rounded-pill dropdown-toggle"
-          type="button"
-          data-bs-toggle="collapse"
-          data-bs-target="#fixtures"
-          aria-expanded="false"
-            aria-controls="fixtures"
-        >
-          FIXTURES
-        </button>
-
-        <div class="list-group collapse" id="fixtures" aria-labelledby="dropdownMenuButton1">
-            <a href="#" class="list-group-item list-group-item-action rounded-pill">Create a new fixture</a>
-            <a href="#" class="list-group-item list-group-item-action rounded-pill">List all fixtures</a>
-            <a href="#" class="list-group-item list-group-item-action rounded-pill">Update a fixture</a>
-            <a href="#" class="list-group-item list-group-item-action rounded-pill">Delete a fixture</a>
-          </div>
-
-      </div>
-
+      </a>
     </div>
+
+    <div class="row justify-content-evenly my-5">
+
+      <!-- card three -->
+      <div class="col-4 card" style="text-align: center; background-color: rgb(225, 181, 36);">
+        <a href="" style="text-decoration:none; color: black">
+        <i class="fa-solid fa-map-marker fa-4x my-1"></i>
+        <div class="card-body">
+          <h3 style="font-size:15px; font-weight:bold">MARKERS</h3>
+        </div>
+        </a>
+      </div>
+
+        <!-- card four -->
+      <div class="col-4 card" style="text-align: center; background-color: rgb(225, 181, 36);">
+        <a href="" style="text-decoration:none; color: black">
+        <i class="fa-solid fa-calendar fa-4x my-1"></i>
+        <div class="card-body">
+          <h3 style="font-size:15px; font-weight:bold">FIXTURES</h3>
+        </div>
+        </a>
+      </div>
+
+    <!-- </div> -->
   </body>
 </html>
